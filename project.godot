@@ -15,6 +15,10 @@ run/main_scene="res://node_2d.tscn"
 config/features=PackedStringArray("4.5", "C#", "Double Precision", "Forward Plus")
 config/icon="res://icon.svg"
 
+[debug]
+
+gdscript/warnings/exclude_addons=false
+
 [dotnet]
 
 project/assembly_name="ChSR - ChomonSpaceRace"
