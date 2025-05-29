@@ -1,11 +1,6 @@
-[gd_scene format=3 uid="uid://c44dxdketg7m5"]
+[gd_scene load_steps=2 format=3 uid="uid://c44dxdketg7m5"]
+
+[ext_resource type="Script" uid="uid://cnulk5wkdfu8m" path="res://Node2d.cs" id="1_wtcfe"]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Label" type="Label" parent="."]
-offset_left = 10.0
-offset_top = -3.0
-offset_right = 911.0
-offset_bottom = 464.0
-text = "czesc to ja"
-justification_flags = 235
+script = ExtResource("1_wtcfe")
