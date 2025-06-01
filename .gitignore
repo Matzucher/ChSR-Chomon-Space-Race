@@ -14,9 +14,14 @@ export_presets.cfg
 data_*/
 mono_crash.*.json
 
+<<<<<<< HEAD
 #Github
 README.md
 
 #Visual Studio Ignores
 .vs/ChSR - ChomonSpaceRace/FileContentIndex/
 .vs/ChSR-Chomon-Space-Race/FileContentIndex/    
+=======
+#Github ignores
+README.md
+>>>>>>> a09dc2a5a91a7237144d95b50939fdddb4b9ee71
