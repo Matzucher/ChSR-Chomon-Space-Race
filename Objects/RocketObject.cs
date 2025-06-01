@@ -14,10 +14,8 @@ public partial class RocketObject : RigidBody2D
     {
 
         //przemieszczanie się rakiety
-        Vector2 velocityVector = new Vector2(0.0, acceleration);
-                
+        Vector2 velocityVector = new Vector2(0.0, -acceleration);        
         LinearVelocity += velocityVector.Rotated(Rotation);
-        Vector2 velocity = LinearVelocity;
 
         //obrót rakiety
         Rotation += rotationVelocity;
