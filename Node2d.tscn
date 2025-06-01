@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://s7ujus3dj30p"]
+
+[ext_resource type="Script" uid="uid://dkibdwgvu77h1" path="res://UserInterfaces/RocketControll/EnginePowerSlider.cs" id="2_ftb66"]
+[ext_resource type="Script" uid="uid://djk6kvdplebbo" path="res://Objects/RocketObject.cs" id="2_g0e52"]
+[ext_resource type="Texture2D" uid="uid://cplq713fdxfc3" path="res://sprites/rocket_test.png" id="3_7sj0w"]
+[ext_resource type="Script" uid="uid://idpkixee6iwk" path="res://UserInterfaces/Debug/DebugView.cs" id="4_kycdm"]
+[ext_resource type="Script" uid="uid://dvjrvs68bugbl" path="res://UserInterfaces/Debug/DebugLabel.cs" id="5_7sj0w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7sj0w"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RocketControllUI" type="CanvasLayer" parent="."]
+
+[node name="EnginePowerSlider" type="VSlider" parent="RocketControllUI"]
+anchors_preset = -1
+anchor_left = 0.953
+anchor_top = 0.319
+anchor_right = 0.976
+anchor_bottom = 0.971
+offset_left = 10.144000000000004
+offset_top = -2.7120000000000175
+offset_right = 9.648000000000138
+offset_bottom = -3.20799999999997
+step = 0.10000000000582077
+script = ExtResource("2_ftb66")
+
+[node name="EnginePowerSliderLabel" type="Label" parent="RocketControllUI/EnginePowerSlider"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.066
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.8520000000000003
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="DebugView" type="CanvasLayer" parent="."]
+script = ExtResource("4_kycdm")
+
+[node name="DebugLabel" type="Label" parent="DebugView"]
+anchors_preset = -1
+anchor_right = 0.551
+anchor_bottom = 0.603
+offset_left = 8.0
+offset_top = 9.0
+offset_right = -446.75200000000007
+offset_bottom = -358.74399999999997
+script = ExtResource("5_7sj0w")
+
+[node name="RocketObject" type="RigidBody2D" parent="."]
+position = Vector2(575, 324)
+can_sleep = false
+script = ExtResource("2_g0e52")
+
+[node name="Sprite2D" type="Sprite2D" parent="RocketObject"]
+rotation = -0.7941248096574199
+scale = Vector2(0.18652343750000008, 0.18482142857142855)
+texture = ExtResource("3_7sj0w")
+
+[node name="Camera2D" type="Camera2D" parent="RocketObject"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RocketObject"]
+shape = SubResource("RectangleShape2D_7sj0w")

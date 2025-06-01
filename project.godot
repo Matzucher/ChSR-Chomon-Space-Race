@@ -11,14 +11,31 @@ config_version=5
 [application]
 
 config/name="ChSR - ChomonSpaceRace"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="uid://s7ujus3dj30p"
 config/features=PackedStringArray("4.5", "C#", "Double Precision", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://sprites/icon.svg"
 
 [debug]
 
 gdscript/warnings/exclude_addons=false
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [dotnet]
 
 project/assembly_name="ChSR - ChomonSpaceRace"
+
+[editor]
+
+naming/scene_name_casing=1
+naming/script_name_casing=1
+
+[physics]
+
+2d/default_gravity=0.0
+2d/default_gravity_vector=Vector2(0, 0)
+2d/default_linear_damp=0.0
+2d/default_angular_damp=0.0
