@@ -9,3 +9,13 @@
  - po otwarciu okna wybieramy "Start in Godot"
  - nastepnie zmieniamy ścierzkę "Executable" na swoją ścierzkę do "godot.windows.editor.double.x86_64.mono.exe"
  - zamykamy okno i możemy spróbować odpalić projekt w Visualu. Breakpointy też powinny działać
+
+
+fish
+```
+   __ _     _   
+  / _(_)___| |__  
+ | |_| / __| '_ \  
+ |  _| \__ \ | | | 
+ |_| |_|___/_| |_|
+```
