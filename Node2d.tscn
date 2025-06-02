@@ -1,12 +1,49 @@
-[gd_scene load_steps=7 format=3 uid="uid://s7ujus3dj30p"]
+[gd_scene load_steps=15 format=3 uid="uid://s7ujus3dj30p"]
 
 [ext_resource type="Script" uid="uid://dkibdwgvu77h1" path="res://UserInterfaces/RocketControll/EnginePowerSlider.cs" id="2_ftb66"]
 [ext_resource type="Script" uid="uid://djk6kvdplebbo" path="res://Objects/RocketObject.cs" id="2_g0e52"]
 [ext_resource type="Texture2D" uid="uid://cplq713fdxfc3" path="res://sprites/rocket_test.png" id="3_7sj0w"]
 [ext_resource type="Script" uid="uid://idpkixee6iwk" path="res://UserInterfaces/Debug/DebugView.cs" id="4_kycdm"]
 [ext_resource type="Script" uid="uid://dvjrvs68bugbl" path="res://UserInterfaces/Debug/DebugLabel.cs" id="5_7sj0w"]
+[ext_resource type="Shader" uid="uid://42o6smcjq4dt" path="res://sprites/shaders/round_sphere.gdshader" id="6_x7la5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7sj0w"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l5lo4"]
+friction = 0.2
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_x7la5"]
+points = PackedVector2Array(0, -39, 15, -20, 17, -4, 16, 15, 22, 19, 23, 31, 20, 46, 15, 29, 13, 29, 9, 35, -10, 35, -14, 29, -16, 29, -21, 47, -24, 30, -22, 20, -17, 15, -17, -4, -15, -20)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0n22w"]
+rough = true
+bounce = 0.1
+absorbent = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tdydx"]
+shader = ExtResource("6_x7la5")
+
+[sub_resource type="Gradient" id="Gradient_5bkv5"]
+offsets = PackedFloat32Array(0, 0.15646258, 0.9047619, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.38928655, 0.38928664, 0.3892865, 1, 0.8732179, 0.8732179, 0.8732179, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_k4h3j"]
+noise_type = 3
+frequency = 0.027
+domain_warp_enabled = true
+domain_warp_type = 2
+domain_warp_amplitude = 7.850000000005821
+domain_warp_frequency = 11.775000000008731
+domain_warp_fractal_octaves = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_csket"]
+width = 2048
+height = 2048
+seamless = true
+seamless_blend_skirt = 0.03
+color_ramp = SubResource("Gradient_5bkv5")
+noise = SubResource("FastNoiseLite_k4h3j")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wttx7"]
+radius = 32768.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -53,15 +90,34 @@ script = ExtResource("5_7sj0w")
 
 [node name="RocketObject" type="RigidBody2D" parent="."]
 position = Vector2(575, 324)
+mass = 10.0
+physics_material_override = SubResource("PhysicsMaterial_l5lo4")
 can_sleep = false
+continuous_cd = 1
 script = ExtResource("2_g0e52")
 
 [node name="Sprite2D" type="Sprite2D" parent="RocketObject"]
 rotation = -0.7941248096574199
-scale = Vector2(0.18652343750000008, 0.18482142857142855)
+scale = Vector2(0.0988441340819732, 0.09660975895536301)
 texture = ExtResource("3_7sj0w")
 
 [node name="Camera2D" type="Camera2D" parent="RocketObject"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RocketObject"]
-shape = SubResource("RectangleShape2D_7sj0w")
+position = Vector2(1, -27)
+shape = SubResource("ConvexPolygonShape2D_x7la5")
+
+[node name="space_object_test" type="RigidBody2D" parent="."]
+position = Vector2(895, -32933)
+mass = 100000.0
+physics_material_override = SubResource("PhysicsMaterial_0n22w")
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="space_object_test"]
+texture_filter = 2
+material = SubResource("ShaderMaterial_tdydx")
+scale = Vector2(32, 32)
+texture = SubResource("NoiseTexture2D_csket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="space_object_test"]
+shape = SubResource("CircleShape2D_wttx7")

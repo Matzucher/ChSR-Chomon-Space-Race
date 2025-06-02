@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://obtc36mf2k2s"]
+
+[node name="GravitySysyemInit" type="Node2D"]
