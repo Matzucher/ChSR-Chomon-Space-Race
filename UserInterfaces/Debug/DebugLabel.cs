@@ -15,14 +15,14 @@ public partial class DebugLabel : Label
 		if (OS.IsDebugBuild())
 		{
 			Text = string.Empty;
-            Text += string.Format("Y: {0}\n", _rocketObject.Position.Y);
-            Text += string.Format("X: {0}\n", _rocketObject.Position.X);
-            Text += string.Format("Y-Vel: {0}\n", _rocketObject.LinearVelocity.Y);
+			Text += string.Format("Y: {0}\n", _rocketObject.Position.Y);
+			Text += string.Format("X: {0}\n", _rocketObject.Position.X);
+			Text += string.Format("Y-Vel: {0}\n", _rocketObject.LinearVelocity.Y);
 			Text += string.Format("X-Vel: {0}\n", _rocketObject.LinearVelocity.X);
 			Text += string.Format("Acceleration: {0}\n", _rocketObject.Get("acceleration"));
 
-            Text += string.Format("Ang-Vel: {0}\n", _rocketObject.AngularVelocity); // THIS is angualr velocity
-            Text += string.Format("Torque: {0}\n", _rocketObject.Get("rotationVelocity")); //@MATZUHER this never was Velocity you aboslute troll
+			Text += string.Format("Ang-Vel: {0}\n", _rocketObject.AngularVelocity); // THIS is angualr velocity
+			Text += string.Format("Torque: {0}\n", _rocketObject.Get("rotationVelocity")); //@MATZUHER this never was Velocity you aboslute troll
 		}
 	}
 }
