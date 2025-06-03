@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://v25wsf20dcvr"]
+[gd_scene format=3 uid="uid://tyj03syljs00"]
 
-[node name="RocetControllUI" type="Control"]
+[node name="WorkshopUi" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
