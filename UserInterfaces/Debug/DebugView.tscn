@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuwy2ohhf2n2g"]
+
+[ext_resource type="Script" uid="uid://idpkixee6iwk" path="res://UserInterfaces/Debug/DebugView.cs" id="1_6y5bp"]
+[ext_resource type="Script" uid="uid://dvjrvs68bugbl" path="res://UserInterfaces/Debug/DebugLabel.cs" id="2_evq3e"]
+
+[node name="DebugView" type="CanvasLayer"]
+script = ExtResource("1_6y5bp")
+
+[node name="DebugLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.551
+anchor_bottom = 0.603
+offset_left = 8.0
+offset_top = 9.0
+offset_right = -446.75200000000007
+offset_bottom = -358.74399999999997
+script = ExtResource("2_evq3e")

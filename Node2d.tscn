@@ -1,17 +1,16 @@
 [gd_scene load_steps=15 format=3 uid="uid://s7ujus3dj30p"]
 
-[ext_resource type="Script" uid="uid://dkibdwgvu77h1" path="res://UserInterfaces/RocketControll/EnginePowerSlider.cs" id="2_ftb66"]
+[ext_resource type="PackedScene" uid="uid://v25wsf20dcvr" path="res://UserInterfaces/RocketControll/RocetControllUi.tscn" id="1_x7la5"]
+[ext_resource type="PackedScene" uid="uid://cuwy2ohhf2n2g" path="res://UserInterfaces/Debug/DebugView.tscn" id="2_7sj0w"]
 [ext_resource type="Script" uid="uid://djk6kvdplebbo" path="res://Objects/RocketObject.cs" id="2_g0e52"]
 [ext_resource type="Texture2D" uid="uid://cplq713fdxfc3" path="res://sprites/rocket_test.png" id="3_7sj0w"]
-[ext_resource type="Script" uid="uid://idpkixee6iwk" path="res://UserInterfaces/Debug/DebugView.cs" id="4_kycdm"]
-[ext_resource type="Script" uid="uid://dvjrvs68bugbl" path="res://UserInterfaces/Debug/DebugLabel.cs" id="5_7sj0w"]
+[ext_resource type="Script" uid="uid://e4ugbp1f7als" path="res://UserInterfaces/temp/minimap-test/minimap-vievport-setup.gd" id="5_x7la5"]
 [ext_resource type="Shader" uid="uid://42o6smcjq4dt" path="res://sprites/shaders/round_sphere.gdshader" id="6_x7la5"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_l5lo4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l5lo4"]
 friction = 0.2
-
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_x7la5"]
-points = PackedVector2Array(0, -39, 15, -20, 17, -4, 16, 15, 22, 19, 23, 31, 20, 46, 15, 29, 13, 29, 9, 35, -10, 35, -14, 29, -16, 29, -21, 47, -24, 30, -22, 20, -17, 15, -17, -4, -15, -20)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0n22w"]
 rough = true
@@ -27,10 +26,9 @@ colors = PackedColorArray(0, 0, 0, 1, 0.38928655, 0.38928664, 0.3892865, 1, 0.87
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_k4h3j"]
 noise_type = 3
-frequency = 0.027
-domain_warp_enabled = true
+frequency = 0.0205
 domain_warp_type = 2
-domain_warp_amplitude = 7.850000000005821
+domain_warp_amplitude = 0.8450000000011642
 domain_warp_frequency = 11.775000000008731
 domain_warp_fractal_octaves = 3
 
@@ -43,81 +41,105 @@ color_ramp = SubResource("Gradient_5bkv5")
 noise = SubResource("FastNoiseLite_k4h3j")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wttx7"]
-radius = 32768.0
+radius = 16384.0
 
 [node name="Node2D" type="Node2D"]
 
-[node name="RocketControllUI" type="CanvasLayer" parent="."]
+[node name="RocketControllUI" parent="." instance=ExtResource("1_x7la5")]
 
-[node name="EnginePowerSlider" type="VSlider" parent="RocketControllUI"]
-anchors_preset = -1
-anchor_left = 0.953
-anchor_top = 0.319
-anchor_right = 0.976
-anchor_bottom = 0.971
-offset_left = 10.144000000000004
-offset_top = -2.7120000000000175
-offset_right = 9.648000000000138
-offset_bottom = -3.20799999999997
-step = 0.10000000000582077
-script = ExtResource("2_ftb66")
+[node name="DebugView" parent="." instance=ExtResource("2_7sj0w")]
 
-[node name="EnginePowerSliderLabel" type="Label" parent="RocketControllUI/EnginePowerSlider"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = -0.066
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 2.8520000000000003
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "0"
-horizontal_alignment = 1
-
-[node name="DebugView" type="CanvasLayer" parent="."]
-script = ExtResource("4_kycdm")
-
-[node name="DebugLabel" type="Label" parent="DebugView"]
-anchors_preset = -1
-anchor_right = 0.551
-anchor_bottom = 0.603
-offset_left = 8.0
-offset_top = 9.0
-offset_right = -446.75200000000007
-offset_bottom = -358.74399999999997
-script = ExtResource("5_7sj0w")
+[node name="minimap-display-temp" type="TextureRect" parent="."]
+offset_left = 575.0
+offset_top = 324.0
+offset_right = 615.0
+offset_bottom = 364.0
+texture = SubResource("ViewportTexture_l5lo4")
 
 [node name="RocketObject" type="RigidBody2D" parent="."]
 position = Vector2(575, 324)
 mass = 10.0
 physics_material_override = SubResource("PhysicsMaterial_l5lo4")
 can_sleep = false
-continuous_cd = 1
 script = ExtResource("2_g0e52")
 
 [node name="Sprite2D" type="Sprite2D" parent="RocketObject"]
 rotation = -0.7941248096574199
-scale = Vector2(0.0988441340819732, 0.09660975895536301)
+scale = Vector2(0.0988441340819732, 0.096609758955363)
 texture = ExtResource("3_7sj0w")
 
 [node name="Camera2D" type="Camera2D" parent="RocketObject"]
+ignore_rotation = false
+limit_enabled = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RocketObject"]
-position = Vector2(1, -27)
-shape = SubResource("ConvexPolygonShape2D_x7la5")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RocketObject"]
+polygon = PackedVector2Array(-10, 9, 11, 9, 21, 21, 24, -2, 17, -11, 16, -43, 1, -66, -14, -43, -15, -11, -23, -2, -20, 22)
+
+[node name="minimap-vievport" type="SubViewport" parent="RocketObject"]
+script = ExtResource("5_x7la5")
+
+[node name="minimap-temp" type="Camera2D" parent="RocketObject/minimap-vievport"]
+position = Vector2(575, 324)
+enabled = false
+zoom = Vector2(0.010000000009313226, 0.010000000009313226)
+limit_enabled = false
 
 [node name="space_object_test" type="RigidBody2D" parent="."]
-position = Vector2(895, -32933)
+position = Vector2(7686, -18380)
 mass = 100000.0
 physics_material_override = SubResource("PhysicsMaterial_0n22w")
 can_sleep = false
 
 [node name="Sprite2D" type="Sprite2D" parent="space_object_test"]
-texture_filter = 2
 material = SubResource("ShaderMaterial_tdydx")
-scale = Vector2(32, 32)
+scale = Vector2(16, 16)
 texture = SubResource("NoiseTexture2D_csket")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="space_object_test"]
 shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="space_object_test2" type="RigidBody2D" parent="."]
+position = Vector2(-17326, 15599)
+mass = 100000.0
+physics_material_override = SubResource("PhysicsMaterial_0n22w")
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="space_object_test2"]
+material = SubResource("ShaderMaterial_tdydx")
+scale = Vector2(16, 16)
+texture = SubResource("NoiseTexture2D_csket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="space_object_test2"]
+shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="space_object_test3" type="RigidBody2D" parent="."]
+position = Vector2(-35502, -23441)
+mass = 100000.0
+physics_material_override = SubResource("PhysicsMaterial_0n22w")
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="space_object_test3"]
+material = SubResource("ShaderMaterial_tdydx")
+scale = Vector2(16, 16)
+texture = SubResource("NoiseTexture2D_csket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="space_object_test3"]
+shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="space_object_test4" type="RigidBody2D" parent="."]
+position = Vector2(-12440, -46773)
+mass = 100000.0
+physics_material_override = SubResource("PhysicsMaterial_0n22w")
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="space_object_test4"]
+material = SubResource("ShaderMaterial_tdydx")
+scale = Vector2(16, 16)
+texture = SubResource("NoiseTexture2D_csket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="space_object_test4"]
+shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
