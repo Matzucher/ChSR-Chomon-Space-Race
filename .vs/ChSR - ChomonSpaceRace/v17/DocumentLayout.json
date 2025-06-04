@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\git-repositories\\Hsr\\ChSR-Chomon-Space-Race\\",
+  "WorkspaceRootPath": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|d:\\git-repositories\\hsr\\chsr-chomon-space-race\\userinterfaces\\debug\\debuglabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\debug\\debuglabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\2828\\documents\\github\\chsr-chomon-space-race\\userinterfaces\\mainmenu\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\mainmenu\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|d:\\git-repositories\\hsr\\chsr-chomon-space-race\\userinterfaces\\debug\\debugview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\2828\\documents\\github\\chsr-chomon-space-race\\userinterfaces\\rocketcontroll\\enginepowerslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\rocketcontroll\\enginepowerslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\2828\\documents\\github\\chsr-chomon-space-race\\userinterfaces\\debug\\debugview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\debug\\debugview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|d:\\git-repositories\\hsr\\chsr-chomon-space-race\\objects\\rocketobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:objects\\rocketobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\2828\\documents\\github\\chsr-chomon-space-race\\userinterfaces\\debug\\debuglabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\debug\\debuglabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|d:\\git-repositories\\hsr\\chsr-chomon-space-race\\userinterfaces\\rocketcontroll\\enginepowerslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\rocketcontroll\\enginepowerslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\2828\\documents\\github\\chsr-chomon-space-race\\objects\\rocketobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:objects\\rocketobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,52 +46,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RocketObject.cs",
-              "DocumentMoniker": "D:\\git-repositories\\Hsr\\ChSR-Chomon-Space-Race\\Objects\\RocketObject.cs",
-              "RelativeDocumentMoniker": "Objects\\RocketObject.cs",
-              "ToolTip": "D:\\git-repositories\\Hsr\\ChSR-Chomon-Space-Race\\Objects\\RocketObject.cs",
-              "RelativeToolTip": "Objects\\RocketObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\UserInterfaces\\mainMenu\\MainMenu.cs",
+              "RelativeDocumentMoniker": "UserInterfaces\\mainMenu\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\UserInterfaces\\mainMenu\\MainMenu.cs",
+              "RelativeToolTip": "UserInterfaces\\mainMenu\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T11:06:18.377Z"
+              "WhenOpened": "2025-06-03T21:10:37.577Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "RocketObject.cs",
+              "DocumentMoniker": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\Objects\\RocketObject.cs",
+              "RelativeDocumentMoniker": "Objects\\RocketObject.cs",
+              "ToolTip": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\Objects\\RocketObject.cs",
+              "RelativeToolTip": "Objects\\RocketObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T11:06:18.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DebugLabel.cs",
-              "DocumentMoniker": "D:\\git-repositories\\Hsr\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\DebugLabel.cs",
+              "DocumentMoniker": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\DebugLabel.cs",
               "RelativeDocumentMoniker": "UserInterfaces\\Debug\\DebugLabel.cs",
-              "ToolTip": "D:\\git-repositories\\Hsr\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\DebugLabel.cs",
+              "ToolTip": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\DebugLabel.cs",
               "RelativeToolTip": "UserInterfaces\\Debug\\DebugLabel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T09:19:08.24Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DebugView.cs",
-              "DocumentMoniker": "D:\\git-repositories\\Hsr\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\DebugView.cs",
+              "DocumentMoniker": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\DebugView.cs",
               "RelativeDocumentMoniker": "UserInterfaces\\Debug\\DebugView.cs",
-              "ToolTip": "D:\\git-repositories\\Hsr\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\DebugView.cs",
+              "ToolTip": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\DebugView.cs",
               "RelativeToolTip": "UserInterfaces\\Debug\\DebugView.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T09:12:14.087Z"
+              "WhenOpened": "2025-06-01T09:12:14.087Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "EnginePowerSlider.cs",
-              "DocumentMoniker": "D:\\git-repositories\\Hsr\\ChSR-Chomon-Space-Race\\UserInterfaces\\RocketControll\\EnginePowerSlider.cs",
+              "DocumentMoniker": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\UserInterfaces\\RocketControll\\EnginePowerSlider.cs",
               "RelativeDocumentMoniker": "UserInterfaces\\RocketControll\\EnginePowerSlider.cs",
-              "ToolTip": "D:\\git-repositories\\Hsr\\ChSR-Chomon-Space-Race\\UserInterfaces\\RocketControll\\EnginePowerSlider.cs",
+              "ToolTip": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\UserInterfaces\\RocketControll\\EnginePowerSlider.cs",
               "RelativeToolTip": "UserInterfaces\\RocketControll\\EnginePowerSlider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T21:09:46.02Z"
+              "WhenOpened": "2025-05-30T21:09:46.02Z",
+              "EditorCaption": ""
             }
           ]
         }

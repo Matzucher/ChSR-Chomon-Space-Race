@@ -2,7 +2,7 @@
   "profiles": {
     "Start in Godot": {
       "commandName": "Executable",
-      "executablePath": "C:\\Godot_double\\godot\\bin\\godot.windows.editor.double.x86_64.mono.exe",
+      "executablePath": "C:\\Users\\2828\\Desktop\\Godot_Better\\godot\\bin\\godot.windows.editor.double.x86_64.mono.exe",
       "commandLineArgs": "--path . --verbose",
       "workingDirectory": ".",
       "nativeDebugging": true
