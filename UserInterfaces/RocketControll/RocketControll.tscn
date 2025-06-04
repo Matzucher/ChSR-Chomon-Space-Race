@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dkibdwgvu77h1" path="res://UserInterfaces/RocketControll/EnginePowerSlider.cs" id="1_ofrcc"]
 
-[node name="RocketControllUi" type="Control"]
+[node name="RocketControllUI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
