@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -68,7 +68,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "RocketObject.cs",
+              "DocumentMoniker": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\Objects\\RocketObject.cs",
+              "RelativeDocumentMoniker": "Objects\\RocketObject.cs",
+              "ToolTip": "C:\\Users\\2828\\Documents\\GitHub\\ChSR-Chomon-Space-Race\\Objects\\RocketObject.cs",
+              "RelativeToolTip": "Objects\\RocketObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T11:06:18.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DebugLabel.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\DebugLabel.cs",
               "RelativeDocumentMoniker": "UserInterfaces\\Debug\\DebugLabel.cs",
@@ -100,7 +113,7 @@
               "RelativeDocumentMoniker": "UserInterfaces\\RocketControll\\EnginePowerSlider.cs",
               "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\RocketControll\\EnginePowerSlider.cs",
               "RelativeToolTip": "UserInterfaces\\RocketControll\\EnginePowerSlider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T21:09:46.02Z",
               "EditorCaption": ""
