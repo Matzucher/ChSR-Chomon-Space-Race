@@ -3,12 +3,10 @@ using System;
 
 public partial class RocketObject : RigidBody2D
 {
-	private const double accelerationSpeed = 0.01f; //tempo zwiększania się przyspieszenia 
 	public double maxAcceleration = 30.0f; //maksymalna moc przyspieszenia rakiety
 	public double acceleration = 0.0f; //przyspieszenie rakiety
 
-	public double rotationAcceleration = 0.00004f;
-	public double rotationVelocity = 0.0f;
+	public const double rotationAcceleration = 0.0005f;
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -16,29 +14,26 @@ public partial class RocketObject : RigidBody2D
 		//przemieszczanie się rakiety
 		Vector2 velocityVector = new Vector2(0.0, -acceleration);        
 		LinearVelocity += velocityVector.Rotated(Rotation);
-
-		//obrót rakiety
-		Rotation += rotationVelocity;
 	}
 
 	public override void _Process(double delta)
 	{
 		if (Input.IsKeyPressed(Key.Right))
 		{
-			rotationVelocity += rotationAcceleration;
+			AngularVelocity += rotationAcceleration;
 		}
 		if (Input.IsKeyPressed(Key.Left))
 		{
-			rotationVelocity -= rotationAcceleration;
+			AngularVelocity -= rotationAcceleration;
 		}
 
 		//zapobieganie bardzo mikroskopijnym precyzjom obrotu
 		if (Input.IsActionJustReleased("ui_right") || Input.IsActionJustReleased("ui_left"))
 		{
-			const double precision = 0.0001;
-			if (rotationVelocity < precision && rotationVelocity > -precision)
+			const double precision = 0.001f;
+			if (AngularVelocity < precision && AngularVelocity > -precision)
 			{
-				rotationVelocity = 0.0;
+				AngularVelocity = 0.0;
 			}
 		}
 	}
