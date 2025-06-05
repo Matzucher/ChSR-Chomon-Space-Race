@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\userinterfaces\\rocketcontroll\\vectorarrowdrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\rocketcontroll\\vectorarrowdrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\objects\\rocketobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:objects\\rocketobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\userinterfaces\\rocketcontroll\\enginepowerslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\rocketcontroll\\enginepowerslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\userinterfaces\\debug\\debuglabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\debug\\debugview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\userinterfaces\\rocketcontroll\\enginepowerslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\rocketcontroll\\enginepowerslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\objects\\rocketobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:objects\\rocketobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,25 +43,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Camera2d.cs",
-              "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Camera2d.cs",
-              "RelativeDocumentMoniker": "Camera2d.cs",
-              "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Camera2d.cs",
-              "RelativeToolTip": "Camera2d.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
+              "Title": "VectorArrowDrawer.cs",
+              "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\RocketControll\\VectorArrowDrawer.cs",
+              "RelativeDocumentMoniker": "UserInterfaces\\RocketControll\\VectorArrowDrawer.cs",
+              "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\RocketControll\\VectorArrowDrawer.cs",
+              "RelativeToolTip": "UserInterfaces\\RocketControll\\VectorArrowDrawer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T12:56:50.49Z",
+              "WhenOpened": "2025-06-05T19:51:48.624Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "RocketObject.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Objects\\RocketObject.cs",
               "RelativeDocumentMoniker": "Objects\\RocketObject.cs",
               "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Objects\\RocketObject.cs",
               "RelativeToolTip": "Objects\\RocketObject.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAowCYAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T11:06:18.377Z",
               "EditorCaption": ""
@@ -74,7 +74,7 @@
               "RelativeDocumentMoniker": "UserInterfaces\\Debug\\DebugLabel.cs",
               "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\DebugLabel.cs",
               "RelativeToolTip": "UserInterfaces\\Debug\\DebugLabel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAACIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T09:19:08.24Z",
               "EditorCaption": ""
@@ -94,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "EnginePowerSlider.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\RocketControll\\EnginePowerSlider.cs",
               "RelativeDocumentMoniker": "UserInterfaces\\RocketControll\\EnginePowerSlider.cs",

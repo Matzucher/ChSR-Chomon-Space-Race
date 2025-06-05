@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuwy2ohhf2n2g"]
+[gd_scene load_steps=3 format=3 uid="uid://xqsboqvaa5fu"]
 
 [ext_resource type="Script" uid="uid://idpkixee6iwk" path="res://UserInterfaces/Debug/DebugView.cs" id="1_6y5bp"]
 [ext_resource type="Script" uid="uid://dvjrvs68bugbl" path="res://UserInterfaces/Debug/DebugLabel.cs" id="2_evq3e"]
