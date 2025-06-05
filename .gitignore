@@ -15,12 +15,7 @@ data_*/
 mono_crash.*.json
 
 #Visual Studio Ignores
-.vs/ChSR - ChomonSpaceRace/FileContentIndex/
-.vs/ChSR - ChomonSpaceRace/v17/
-.vs/ChSR-Chomon-Space-Race/FileContentIndex/  
-Properties.launchSettings.json
-
-
+.vs/
 
 #Github ignores
 README.md
