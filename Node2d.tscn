@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://s7ujus3dj30p"]
 
 [ext_resource type="PackedScene" uid="uid://o2g263jcv3pw" path="res://UserInterfaces/RocketControll/RocketControll.tscn" id="1_7sj0w"]
-[ext_resource type="PackedScene" uid="uid://cuwy2ohhf2n2g" path="res://UserInterfaces/Debug/DebugView.tscn" id="2_7sj0w"]
+[ext_resource type="PackedScene" uid="uid://xqsboqvaa5fu" path="res://UserInterfaces/Debug/DebugView.tscn" id="2_7sj0w"]
 [ext_resource type="Script" uid="uid://djk6kvdplebbo" path="res://Objects/RocketObject.cs" id="2_g0e52"]
 [ext_resource type="Texture2D" uid="uid://cplq713fdxfc3" path="res://sprites/rocket_test.png" id="3_7sj0w"]
 [ext_resource type="Script" uid="uid://xp8qyiedwtix" path="res://Camera2d.cs" id="5_x7la5"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuwy2ohhf2n2g"]
+[gd_scene load_steps=4 format=3 uid="uid://xqsboqvaa5fu"]
 
 [ext_resource type="Script" uid="uid://idpkixee6iwk" path="res://UserInterfaces/Debug/DebugView.cs" id="1_6y5bp"]
 [ext_resource type="Script" uid="uid://dvjrvs68bugbl" path="res://UserInterfaces/Debug/DebugLabel.cs" id="2_evq3e"]
+[ext_resource type="Script" uid="uid://vdf8wj5ppsns" path="res://UserInterfaces/Debug/GoToEditorButton.cs" id="3_evq3e"]
 
 [node name="DebugViewUI" type="Control"]
 layout_mode = 3
@@ -24,3 +25,18 @@ offset_right = -446.75200000000007
 offset_bottom = -276.736
 script = ExtResource("2_evq3e")
 metadata/_edit_use_anchors_ = true
+
+[node name="GoToEditorButton" type="Button" parent="DebugView"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 323.0
+offset_top = -246.0
+offset_right = 442.672
+offset_bottom = -193.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GoTo Editor"
+script = ExtResource("3_evq3e")
