@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://obtc36mf2k2s"]
+[gd_scene load_steps=2 format=3 uid="uid://obtc36mf2k2s"]
+
+[ext_resource type="Script" uid="uid://d1q75vwnuca45" path="res://Properties/Gravity/GravitySysyemInit.cs" id="1_hce7t"]
 
 [node name="GravitySysyemInit" type="Node2D"]
+script = ExtResource("1_hce7t")

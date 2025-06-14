@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://s7ujus3dj30p"]
+[gd_scene load_steps=22 format=3 uid="uid://s7ujus3dj30p"]
 
 [ext_resource type="PackedScene" uid="uid://o2g263jcv3pw" path="res://UserInterfaces/RocketControll/RocketControll.tscn" id="1_7sj0w"]
+[ext_resource type="PackedScene" uid="uid://obtc36mf2k2s" path="res://Properties/Gravity/GravitySysyemInit.tscn" id="1_l5lo4"]
 [ext_resource type="PackedScene" uid="uid://cuwy2ohhf2n2g" path="res://UserInterfaces/Debug/DebugView.tscn" id="2_7sj0w"]
 [ext_resource type="Script" uid="uid://djk6kvdplebbo" path="res://Objects/RocketObject.cs" id="2_g0e52"]
 [ext_resource type="Texture2D" uid="uid://cplq713fdxfc3" path="res://sprites/rocket_test.png" id="3_7sj0w"]
@@ -49,7 +50,36 @@ noise = SubResource("FastNoiseLite_k4h3j")
 [sub_resource type="CircleShape2D" id="CircleShape2D_wttx7"]
 radius = 16384.0
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6t028"]
+friction = 0.1
+rough = true
+bounce = 0.1
+absorbent = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wttx7"]
+shader = ExtResource("6_x7la5")
+
+[sub_resource type="Gradient" id="Gradient_tdydx"]
+offsets = PackedFloat32Array(0, 0.14285715, 0.8877551, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.28485027, 0.28485027, 0.28485027, 1, 0.82178885, 0.8217887, 0.82178825, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5bkv5"]
+noise_type = 3
+frequency = 0.0216
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_k4h3j"]
+width = 4096
+height = 4096
+seamless = true
+color_ramp = SubResource("Gradient_tdydx")
+noise = SubResource("FastNoiseLite_5bkv5")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0n22w"]
+radius = 32768.0
+
 [node name="Node2D" type="Node2D"]
+
+[node name="GravitySysyemInit" parent="." instance=ExtResource("1_l5lo4")]
 
 [node name="RocketControllUI" parent="." instance=ExtResource("1_7sj0w")]
 
@@ -83,62 +113,198 @@ enabled = false
 zoom = Vector2(0.01000000000931322, 0.01000000000931322)
 limit_enabled = false
 
-[node name="space_object_test" type="RigidBody2D" parent="."]
+[node name="test_space_objects" type="Node2D" parent="."]
+
+[node name="space_object_test" type="RigidBody2D" parent="test_space_objects"]
 position = Vector2(7686, -18380)
 mass = 100000.0
 physics_material_override = SubResource("PhysicsMaterial_0n22w")
 can_sleep = false
 
-[node name="Sprite2D" type="Sprite2D" parent="space_object_test"]
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects/space_object_test"]
 material = SubResource("ShaderMaterial_tdydx")
 scale = Vector2(16, 16)
 texture = SubResource("NoiseTexture2D_csket")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="space_object_test"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_space_objects/space_object_test"]
 shape = SubResource("CircleShape2D_wttx7")
 debug_color = Color(0, 0.6, 0.69803923, 0)
 
-[node name="space_object_test2" type="RigidBody2D" parent="."]
+[node name="space_object_test2" type="RigidBody2D" parent="test_space_objects"]
 position = Vector2(-17326, 15599)
 mass = 100000.0
 physics_material_override = SubResource("PhysicsMaterial_0n22w")
 can_sleep = false
 
-[node name="Sprite2D" type="Sprite2D" parent="space_object_test2"]
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects/space_object_test2"]
 material = SubResource("ShaderMaterial_tdydx")
 scale = Vector2(16, 16)
 texture = SubResource("NoiseTexture2D_csket")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="space_object_test2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_space_objects/space_object_test2"]
 shape = SubResource("CircleShape2D_wttx7")
 debug_color = Color(0, 0.6, 0.69803923, 0)
 
-[node name="space_object_test3" type="RigidBody2D" parent="."]
+[node name="space_object_test3" type="RigidBody2D" parent="test_space_objects"]
 position = Vector2(-35502, -23441)
 mass = 100000.0
 physics_material_override = SubResource("PhysicsMaterial_0n22w")
 can_sleep = false
 
-[node name="Sprite2D" type="Sprite2D" parent="space_object_test3"]
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects/space_object_test3"]
 material = SubResource("ShaderMaterial_tdydx")
 scale = Vector2(16, 16)
 texture = SubResource("NoiseTexture2D_csket")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="space_object_test3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_space_objects/space_object_test3"]
 shape = SubResource("CircleShape2D_wttx7")
 debug_color = Color(0, 0.6, 0.69803923, 0)
 
-[node name="space_object_test4" type="RigidBody2D" parent="."]
+[node name="space_object_test4" type="RigidBody2D" parent="test_space_objects"]
 position = Vector2(-12440, -46773)
 mass = 100000.0
 physics_material_override = SubResource("PhysicsMaterial_0n22w")
 can_sleep = false
 
-[node name="Sprite2D" type="Sprite2D" parent="space_object_test4"]
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects/space_object_test4"]
 material = SubResource("ShaderMaterial_tdydx")
 scale = Vector2(16, 16)
 texture = SubResource("NoiseTexture2D_csket")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="space_object_test4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_space_objects/space_object_test4"]
 shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="space_object_test5" type="RigidBody2D" parent="test_space_objects"]
+position = Vector2(-51480, 7371)
+mass = 100000.0
+physics_material_override = SubResource("PhysicsMaterial_0n22w")
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects/space_object_test5"]
+material = SubResource("ShaderMaterial_tdydx")
+scale = Vector2(16, 16)
+texture = SubResource("NoiseTexture2D_csket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_space_objects/space_object_test5"]
+shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="space_object_test6" type="RigidBody2D" parent="test_space_objects"]
+position = Vector2(42216, -20149)
+mass = 100000.0
+physics_material_override = SubResource("PhysicsMaterial_0n22w")
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects/space_object_test6"]
+material = SubResource("ShaderMaterial_tdydx")
+scale = Vector2(16, 16)
+texture = SubResource("NoiseTexture2D_csket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_space_objects/space_object_test6"]
+shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="space_object_test7" type="RigidBody2D" parent="test_space_objects"]
+position = Vector2(24047, -51996)
+mass = 100000.0
+physics_material_override = SubResource("PhysicsMaterial_0n22w")
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects/space_object_test7"]
+material = SubResource("ShaderMaterial_tdydx")
+scale = Vector2(16, 16)
+texture = SubResource("NoiseTexture2D_csket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_space_objects/space_object_test7"]
+shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="space_object_test8" type="RigidBody2D" parent="test_space_objects"]
+position = Vector2(-80913, -34204)
+mass = 100000.0
+physics_material_override = SubResource("PhysicsMaterial_0n22w")
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects/space_object_test8"]
+material = SubResource("ShaderMaterial_tdydx")
+scale = Vector2(16, 16)
+texture = SubResource("NoiseTexture2D_csket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_space_objects/space_object_test8"]
+shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="space_object_test9" type="RigidBody2D" parent="test_space_objects"]
+position = Vector2(-85009, -156)
+mass = 100000.0
+physics_material_override = SubResource("PhysicsMaterial_0n22w")
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects/space_object_test9"]
+material = SubResource("ShaderMaterial_tdydx")
+scale = Vector2(16, 16)
+texture = SubResource("NoiseTexture2D_csket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_space_objects/space_object_test9"]
+shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="space_object_test10" type="RigidBody2D" parent="test_space_objects"]
+position = Vector2(-42001, 43620)
+mass = 100000.0
+physics_material_override = SubResource("PhysicsMaterial_0n22w")
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects/space_object_test10"]
+material = SubResource("ShaderMaterial_tdydx")
+scale = Vector2(16, 16)
+texture = SubResource("NoiseTexture2D_csket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_space_objects/space_object_test10"]
+shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="space_object_test11" type="RigidBody2D" parent="test_space_objects"]
+position = Vector2(-77329, 34276)
+mass = 100000.0
+physics_material_override = SubResource("PhysicsMaterial_0n22w")
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects/space_object_test11"]
+material = SubResource("ShaderMaterial_tdydx")
+scale = Vector2(16, 16)
+texture = SubResource("NoiseTexture2D_csket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_space_objects/space_object_test11"]
+shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="space_object_test12" type="RigidBody2D" parent="test_space_objects"]
+position = Vector2(-47633, -58268)
+mass = 100000.0
+physics_material_override = SubResource("PhysicsMaterial_0n22w")
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects/space_object_test12"]
+material = SubResource("ShaderMaterial_tdydx")
+scale = Vector2(16, 16)
+texture = SubResource("NoiseTexture2D_csket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test_space_objects/space_object_test12"]
+shape = SubResource("CircleShape2D_wttx7")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="test-large-moon" type="RigidBody2D" parent="."]
+position = Vector2(50944, 42240)
+mass = 1000000.0000000001
+physics_material_override = SubResource("PhysicsMaterial_6t028")
+
+[node name="Sprite2D" type="Sprite2D" parent="test-large-moon"]
+material = SubResource("ShaderMaterial_wttx7")
+scale = Vector2(16, 16)
+texture = SubResource("NoiseTexture2D_k4h3j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test-large-moon"]
+shape = SubResource("CircleShape2D_0n22w")
 debug_color = Color(0, 0.6, 0.69803923, 0)

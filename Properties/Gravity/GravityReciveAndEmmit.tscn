@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmhyo0gs4ufba"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_4267x"]
+script/source = "using Godot;
+using System;
+
+public partial class GravityReciveAndEmmit : Node2D
+{
+}
+"
+
+[node name="GravityReciveAndEmmit" type="Node2D"]
+script = SubResource("CSharpScript_4267x")

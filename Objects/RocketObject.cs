@@ -3,40 +3,42 @@ using System;
 
 public partial class RocketObject : RigidBody2D
 {
-	public double maxAcceleration = 30.0f; //maksymalna moc przyspieszenia rakiety
-	public double acceleration = 0.0f; //przyspieszenie rakiety
+	public double maxAcceleration = 1000.0; //maksymalna moc przyspieszenia rakiety
+	public double acceleration = 0.0; //przyspieszenie rakiety
 
-	public const double rotationAcceleration = 0.0005f;
+	public double rotationAcceleration = 0.0;
 
-	public override void _PhysicsProcess(double delta)
+	public override void _IntegrateForces(PhysicsDirectBodyState2D state)
 	{
+		Vector2 valocityVector = new Vector2(0.0, -acceleration);
+		state.ApplyForce(valocityVector.Rotated(Rotation));
 
-		//przemieszczanie się rakiety
-		Vector2 velocityVector = new Vector2(0.0, -acceleration);        
-		LinearVelocity += velocityVector.Rotated(Rotation);
+		state.ApplyTorque(rotationAcceleration);
 	}
 
 	public override void _Process(double delta)
 	{
 		if (Input.IsKeyPressed(Key.Right))
 		{
-			AngularVelocity += rotationAcceleration;
-		}
+			rotationAcceleration = 2000.0;
+            if (rotationAcceleration > 20000.0)
+            {
+                rotationAcceleration = 20000.0;
+            }
+        }
 		if (Input.IsKeyPressed(Key.Left))
 		{
-			AngularVelocity -= rotationAcceleration;
-		}
-
-		//zapobieganie bardzo mikroskopijnym precyzjom obrotu
-		if (Input.IsActionJustReleased("ui_right") || Input.IsActionJustReleased("ui_left"))
-		{
-			const double precision = 0.001f;
-			if (AngularVelocity < precision && AngularVelocity > -precision)
+			rotationAcceleration = -2000.0;
+			if (rotationAcceleration < -20000.0)
 			{
-				AngularVelocity = 0.0;
+				rotationAcceleration = -20000.0;
 			}
 		}
-	}
+		if (!(Input.IsKeyPressed(Key.Left) || Input.IsKeyPressed(Key.Right)))
+		{
+            rotationAcceleration = -0;
+        }
+    }
 
 	/// <summary>
 	///	Metoda zajmuje się płynnym wzrostem i spadkiem przyspieszenia rakiety 
