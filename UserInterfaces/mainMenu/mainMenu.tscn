@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cs5eh8ob7ufqq"]
+[gd_scene load_steps=4 format=3 uid="uid://cs5eh8ob7ufqq"]
 
 [ext_resource type="Script" uid="uid://c03bhivbomssl" path="res://UserInterfaces/mainMenu/MainMenu.cs" id="1_47ape"]
 [ext_resource type="Texture2D" uid="uid://btccl0me4gcle" path="res://UserInterfaces/mainMenu/images/icon.svg" id="2_pmkyx"]
+[ext_resource type="Script" uid="uid://dpxfuru6wp5gd" path="res://UserInterfaces/mainMenu/Options.cs" id="3_ugxri"]
 
 [node name="mainMenu" type="Control"]
 layout_mode = 3
@@ -113,3 +114,48 @@ popup/item_1/text = "el2"
 popup/item_1/id = 1
 popup/item_2/text = "el3"
 popup/item_2/id = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.749
+anchor_top = 0.395
+anchor_right = 0.749
+anchor_bottom = 0.395
+offset_left = -35.087999999999965
+offset_top = -51.24000000000001
+offset_right = 35.912000000000035
+offset_bottom = 50.75999999999999
+tooltip_text = "test"
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="Options" type="VBoxContainer" parent="VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+script = ExtResource("3_ugxri")
+
+[node name="show" type="ScrollContainer" parent="VBoxContainer2/Options"]
+layout_mode = 2
+draw_focus_border = true
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/Options/show"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/Options/show/VBoxContainer"]
+layout_mode = 2
+text = "text1"
+
+[node name="Label2" type="Label" parent="VBoxContainer2/Options/show/VBoxContainer"]
+layout_mode = 2
+text = "text2"
+
+[node name="Label3" type="Label" parent="VBoxContainer2/Options/show/VBoxContainer"]
+layout_mode = 2
+text = "text3"
+
+[connection signal="pressed" from="VBoxContainer2/Button" to="VBoxContainer2/Options" method="expand"]
