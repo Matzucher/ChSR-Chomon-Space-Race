@@ -7,8 +7,10 @@ public partial class MainMenu : Control
     private Button start;
     private Button options;
     private Button quit;
+    private PackedScene nextScene = (PackedScene)ResourceLoader.Load("res://Node2d.tscn");
     public override void _Ready()
     {
+        
         start = GetNode<Button>("VBoxContainer/Start");
         options = GetNode<Button>("VBoxContainer/Options");
         quit = GetNode<Button>("VBoxContainer/Quit");
@@ -18,8 +20,7 @@ public partial class MainMenu : Control
     }
 
     private void startPressed()
-    {
-        var nextScene = (PackedScene)ResourceLoader.Load("res://Node2d.tscn");
+    {  
         GetTree().ChangeSceneToPacked(nextScene);
         GD.Print("Nacisnieto start!");
     }

@@ -1,23 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://cs5eh8ob7ufqq"]
+[gd_scene load_steps=7 format=3 uid="uid://cs5eh8ob7ufqq"]
 
 [ext_resource type="Script" uid="uid://c03bhivbomssl" path="res://UserInterfaces/mainMenu/MainMenu.cs" id="1_47ape"]
 [ext_resource type="Texture2D" uid="uid://btccl0me4gcle" path="res://UserInterfaces/mainMenu/images/icon.svg" id="2_pmkyx"]
+[ext_resource type="Script" uid="uid://7qvhkkdcaayy" path="res://UserInterfaces/mainMenu/Control.cs" id="3_0b616"]
 [ext_resource type="Script" uid="uid://dpxfuru6wp5gd" path="res://UserInterfaces/mainMenu/Options.cs" id="3_ugxri"]
+[ext_resource type="Script" uid="uid://bj3v8mnrvjgio" path="res://UserInterfaces/mainMenu/CollapsingButtons.cs" id="5_mcs86"]
+[ext_resource type="Script" uid="uid://b08buaaw8w400" path="res://UserInterfaces/mainMenu/Control2.cs" id="5_p21se"]
 
 [node name="mainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 83.0
+offset_top = 72.0
+offset_right = 83.0
+offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(414, 387)
 script = ExtResource("1_47ape")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 144.0
-offset_right = 340.0
+offset_left = -78.0
+offset_top = 97.0
+offset_right = 356.0
 offset_bottom = 506.0
 
 [node name="Start" type="Button" parent="VBoxContainer"]
@@ -53,8 +61,10 @@ text = "Quit"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 594.0
-offset_bottom = 137.0
+offset_left = -2.0
+offset_top = -57.0
+offset_right = 592.0
+offset_bottom = 80.0
 theme_override_colors/font_color = Color(0.6686994, 0.19224, 0.2640544, 1)
 theme_override_font_sizes/font_size = 100
 text = "(C)HSR"
@@ -62,16 +72,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(894, 494)
+position = Vector2(876, 467)
 scale = Vector2(0.265625, 0.265625)
 texture = ExtResource("2_pmkyx")
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 757.0
-offset_top = 482.0
-offset_right = 910.0
-offset_bottom = 507.0
+offset_left = 707.0
+offset_top = 453.0
+offset_right = 860.0
+offset_bottom = 478.0
 theme_override_colors/font_color = Color(1.9285638, 2.3675897, 2.3978672, 1)
 theme_override_font_sizes/font_size = 12
 text = "Space for logos"
@@ -115,17 +125,44 @@ popup/item_1/id = 1
 popup/item_2/text = "el3"
 popup/item_2/id = 2
 
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchor_left = 0.712
+anchor_top = 0.406
+anchor_right = 0.736
+anchor_bottom = 0.434
+offset_left = -0.34399999999993724
+offset_top = 0.1279999999999859
+offset_right = 67.76800000000003
+offset_bottom = 3.7920000000000016
+script = ExtResource("3_0b616")
+
+[node name="Collapse" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 18.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+layout_mode = 0
+offset_top = 18.0
+offset_right = 90.0
+offset_bottom = 40.0
+
+[node name="Content" type="Button" parent="Control/ScrollContainer"]
+layout_mode = 2
+
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.749
-anchor_top = 0.395
-anchor_right = 0.749
-anchor_bottom = 0.395
-offset_left = -35.087999999999965
-offset_top = -51.24000000000001
-offset_right = 35.912000000000035
-offset_bottom = 50.75999999999999
+anchor_left = 0.782
+anchor_top = 0.23
+anchor_right = 0.842
+anchor_bottom = 0.361
+offset_left = -0.18399999999996908
+offset_top = 0.23999999999999488
+offset_right = 0.09600000000000364
+offset_bottom = 0.16800000000000637
 tooltip_text = "test"
 alignment = 1
 
@@ -143,19 +180,90 @@ draw_focus_border = true
 horizontal_scroll_mode = 2
 vertical_scroll_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2/Options/show"]
+[node name="Label" type="Label" parent="VBoxContainer2/Options/show"]
 layout_mode = 2
+text = "Text"
 
-[node name="Label" type="Label" parent="VBoxContainer2/Options/show/VBoxContainer"]
-layout_mode = 2
-text = "text1"
+[node name="Control2" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 405.0
+offset_top = 324.0
+offset_right = 566.0
+offset_bottom = 494.0
+script = ExtResource("5_p21se")
 
-[node name="Label2" type="Label" parent="VBoxContainer2/Options/show/VBoxContainer"]
-layout_mode = 2
-text = "text2"
+[node name="CollapsingButtons" type="Button" parent="Control2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 76.0
+offset_bottom = 41.0
+text = "Test"
+script = ExtResource("5_mcs86")
 
-[node name="Label3" type="Label" parent="VBoxContainer2/Options/show/VBoxContainer"]
-layout_mode = 2
-text = "text3"
+[node name="B1" type="Button" parent="Control2/CollapsingButtons"]
+layout_mode = 0
+offset_left = 75.0
+offset_right = 113.0
+offset_bottom = 10.0
+theme_override_font_sizes/font_size = 8
 
+[node name="B2" type="Button" parent="Control2/CollapsingButtons"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 12.0
+offset_right = 113.0
+offset_bottom = 22.0
+
+[node name="B3" type="Button" parent="Control2/CollapsingButtons"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 24.0
+offset_right = 113.0
+offset_bottom = 34.0
+
+[node name="CollapsingButton2s2" type="Button" parent="Control2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 42.0
+offset_right = 75.0
+offset_bottom = 78.0
+text = "Test"
+script = ExtResource("5_mcs86")
+
+[node name="B1" type="Button" parent="Control2/CollapsingButton2s2"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = -37.0
+offset_right = 115.0
+offset_bottom = -27.0
+theme_override_font_sizes/font_size = 8
+
+[node name="B2" type="Button" parent="Control2/CollapsingButton2s2"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = -25.0
+offset_right = 115.0
+offset_bottom = -15.0
+
+[node name="B3" type="Button" parent="Control2/CollapsingButton2s2"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = -13.0
+offset_right = 115.0
+offset_bottom = -3.0
+
+[node name="CloseButton" type="Button" parent="Control2"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 1.0
+offset_right = 128.0
+offset_bottom = 9.0
+
+[connection signal="pressed" from="Control/Collapse" to="Control" method="_on_collapse_pressed"]
 [connection signal="pressed" from="VBoxContainer2/Button" to="VBoxContainer2/Options" method="expand"]
+[connection signal="pressed" from="Control2/CollapsingButtons" to="Control2/CollapsingButtons" method="_on_pressed"]
+[connection signal="pressed" from="Control2/CollapsingButtons" to="Control2" method="_on_collapsing_buttons_pressed"]
+[connection signal="pressed" from="Control2/CollapsingButton2s2" to="Control2/CollapsingButton2s2" method="_on_pressed"]
+[connection signal="pressed" from="Control2/CollapsingButton2s2" to="Control2" method="_on_collapsing_buttons_pressed"]
+[connection signal="pressed" from="Control2/CloseButton" to="Control2" method="_zamknij"]
