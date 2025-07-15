@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://46jtj3ct4kpu"]
+
+[ext_resource type="Script" path="res://Workshop/Slot.gd" id="1_wvjcr"]
+
+[node name="Slot" type="Panel"]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+offset_right = 39.0
+offset_bottom = 39.0
+script = ExtResource("1_wvjcr")
+item_name = "fueltank"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.095
+anchor_top = 0.092
+anchor_right = 0.095
+anchor_bottom = 0.092
+offset_left = -0.4
+offset_top = -0.04
+offset_right = 31.6
+offset_bottom = 31.96
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="gui_input" from="." to="." method="_on_Slot_gui_input"]
