@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxww7g0jbx57v"
-path="res://.godot/imported/BasicTank.png-d22cca5477352bc88009836d774b102f.ctex"
+uid="uid://7q3vje5l6h7"
+path="res://.godot/imported/Connector.png-b495c782df146c8550d33758e37668f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/BasicTank.png"
-dest_files=["res://.godot/imported/BasicTank.png-d22cca5477352bc88009836d774b102f.ctex"]
+source_file="res://sprites/Connector.png"
+dest_files=["res://.godot/imported/Connector.png-b495c782df146c8550d33758e37668f4.ctex"]
 
 [params]
 

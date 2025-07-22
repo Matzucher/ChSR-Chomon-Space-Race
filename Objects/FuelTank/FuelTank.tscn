@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbcoglv72li28"]
+
+[ext_resource type="Texture2D" uid="uid://brcbx2ipa1n3" path="res://sprites/fueltank.png" id="1_bcjdx"]
+[ext_resource type="Script" uid="uid://cmipv7ljyuyjb" path="res://Workshop/WorkshopMovementComponent.cs" id="2_c7uy1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ke2u"]
+
+[node name="FuelTank" type="StaticBody2D"]
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_bcjdx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.6000000000058208, 1.6000000000058208)
+shape = SubResource("RectangleShape2D_7ke2u")
+
+[node name="WorkshopMovementComponent" type="Area2D" parent="."]
+script = ExtResource("2_c7uy1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorkshopMovementComponent"]
+scale = Vector2(1.6000000000058208, 1.6000000000058208)
+shape = SubResource("RectangleShape2D_7ke2u")

@@ -1,15 +1,18 @@
 using Godot;
 using System;
 
-public partial class WorkshopTileMap : TileMapLayer
+public partial class Grid : TileMapLayer
 {
-	int gridSize = 50;
+	int gridSize = 50; //wysokość i szerokość grida
 	public override void _Ready()
 	{
 		ProcessMode = ProcessModeEnum.Disabled;
 		CallDeferred(nameof(GenerateTiles));
 	}
 
+	/// <summary>
+	/// Ustawia pozycje wszystkich komórek w gridzie
+	/// </summary>
 	private void GenerateTiles()
 	{
 		for (int x = 0; x < gridSize; x++)
@@ -19,9 +22,5 @@ public partial class WorkshopTileMap : TileMapLayer
 				SetCell(new Vector2I(x, y), 0, new Vector2I(0, 0), 0);
 			}
 		}
-	}
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
 	}
 }

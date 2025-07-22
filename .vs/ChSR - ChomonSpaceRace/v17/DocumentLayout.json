@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\workshopmovementcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\workshopmovementcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\workshopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\workshopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\userinterfaces\\workshop\\spawnobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\workshop\\spawnobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\workshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\workshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\workshopcamera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\workshopcamera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\workshoptilemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\workshoptilemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\userinterfaces\\debug\\gotoeditorbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\debug\\gotoeditorbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,20 +54,84 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WorkshopManager.cs",
+              "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopManager.cs",
+              "RelativeDocumentMoniker": "Workshop\\WorkshopManager.cs",
+              "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopManager.cs",
+              "RelativeToolTip": "Workshop\\WorkshopManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T10:18:26.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SpawnObject.cs",
+              "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\Workshop\\SpawnObject.cs",
+              "RelativeDocumentMoniker": "UserInterfaces\\Workshop\\SpawnObject.cs",
+              "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\Workshop\\SpawnObject.cs",
+              "RelativeToolTip": "UserInterfaces\\Workshop\\SpawnObject.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwBEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T16:56:18.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Grid.cs",
+              "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\Grid.cs",
+              "RelativeDocumentMoniker": "Workshop\\Grid.cs",
+              "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\Grid.cs",
+              "RelativeToolTip": "Workshop\\Grid.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T14:20:36.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorkshopMovementComponent.cs",
+              "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopMovementComponent.cs",
+              "RelativeDocumentMoniker": "Workshop\\WorkshopMovementComponent.cs",
+              "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopMovementComponent.cs",
+              "RelativeToolTip": "Workshop\\WorkshopMovementComponent.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T13:56:38.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Workshop.cs",
+              "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\Workshop.cs",
+              "RelativeDocumentMoniker": "Workshop\\Workshop.cs",
+              "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\Workshop.cs",
+              "RelativeToolTip": "Workshop\\Workshop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T12:58:15.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "GoToEditorButton.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\GoToEditorButton.cs",
               "RelativeDocumentMoniker": "UserInterfaces\\Debug\\GoToEditorButton.cs",
               "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\GoToEditorButton.cs",
               "RelativeToolTip": "UserInterfaces\\Debug\\GoToEditorButton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:36:01.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T09:36:01.697Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Camera2d.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Camera2d.cs",
               "RelativeDocumentMoniker": "Camera2d.cs",
@@ -59,33 +139,19 @@
               "RelativeToolTip": "Camera2d.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:26:57.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T09:26:57.538Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "WorkshopCamera2d.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopCamera2d.cs",
               "RelativeDocumentMoniker": "Workshop\\WorkshopCamera2d.cs",
               "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopCamera2d.cs",
               "RelativeToolTip": "Workshop\\WorkshopCamera2d.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwA8AAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T09:26:56.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WorkshopTileMap.cs",
-              "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopTileMap.cs",
-              "RelativeDocumentMoniker": "Workshop\\WorkshopTileMap.cs",
-              "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopTileMap.cs",
-              "RelativeToolTip": "Workshop\\WorkshopTileMap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:24:29.474Z",
               "EditorCaption": ""
             }
           ]

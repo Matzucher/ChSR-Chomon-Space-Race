@@ -1,36 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://tyj03syljs00"]
+[gd_scene load_steps=5 format=3 uid="uid://tyj03syljs00"]
 
-[ext_resource type="Texture2D" uid="uid://dxww7g0jbx57v" path="res://sprites/BasicTank.png" id="1_7wlx6"]
-[ext_resource type="Script" uid="uid://v07sun8g6def" path="res://UserInterfaces/Workshop/GrabableObject.cs" id="1_vfbdl"]
+[ext_resource type="Texture2D" uid="uid://brcbx2ipa1n3" path="res://sprites/fueltank.png" id="2_vfbdl"]
+[ext_resource type="Script" uid="uid://6svigieot2v3" path="res://UserInterfaces/Workshop/SpawnObject.cs" id="2_xwbh3"]
+[ext_resource type="Texture2D" uid="uid://7q3vje5l6h7" path="res://sprites/Connector.png" id="3_xwbh3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7wlx6"]
-size = Vector2(16, 15.999999999999998)
+size = Vector2(80, 128)
 
 [node name="WorkshopUi" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = 3.0
-offset_right = 1.0
-offset_bottom = 1.1480000000000246
+offset_bottom = -1.8519999999999752
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
 
-[node name="GrabableObjects" type="Node2D" parent="CanvasLayer"]
-script = ExtResource("1_vfbdl")
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="CanvasLayer/GrabableObjects"]
-position = Vector2(62, 61)
-scale = Vector2(4, 4)
+[node name="FuelTank" type="Area2D" parent="CanvasLayer/VBoxContainer"]
+position = Vector2(24, 27)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("2_xwbh3")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/GrabableObjects/StaticBody2D"]
-texture = ExtResource("1_7wlx6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/GrabableObjects/StaticBody2D"]
-position = Vector2(0, -0.07399999999999984)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/VBoxContainer/FuelTank"]
 shape = SubResource("RectangleShape2D_7wlx6")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/VBoxContainer/FuelTank"]
+texture = ExtResource("2_vfbdl")
+
+[node name="Connector" type="Area2D" parent="CanvasLayer/VBoxContainer"]
+position = Vector2(24, 65)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("2_xwbh3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/VBoxContainer/Connector"]
+shape = SubResource("RectangleShape2D_7wlx6")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/VBoxContainer/Connector"]
+scale = Vector2(2, 2)
+texture = ExtResource("3_xwbh3")
