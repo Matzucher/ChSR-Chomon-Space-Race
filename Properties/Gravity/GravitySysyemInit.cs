@@ -21,8 +21,11 @@ public partial class GravitySysyemInit : Node2D
         //Position and size of the node
         Quad quad;
 
-        unsafe fixed UInt32 children[4];
+        UInt32 firstChild;
     }
-    
+    private struct QuadTree
+    {
+        //List<Node> nodes;
+    }
 
 }

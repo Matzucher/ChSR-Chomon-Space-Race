@@ -8,30 +8,30 @@ public partial class RocketObject : RigidBody2D
 
 	public double rotationAcceleration = 0.0;
 
-	public override void _IntegrateForces(PhysicsDirectBodyState2D state)
+    public override void _IntegrateForces(PhysicsDirectBodyState2D state)
 	{
 		Vector2 valocityVector = new Vector2(0.0, -acceleration);
 		state.ApplyForce(valocityVector.Rotated(Rotation));
 
 		state.ApplyTorque(rotationAcceleration);
-	}
+    }
 
 	public override void _Process(double delta)
 	{
 		if (Input.IsKeyPressed(Key.Right))
 		{
-			rotationAcceleration = 2000.0;
-            if (rotationAcceleration > 20000.0)
+			rotationAcceleration += 1500.0;
+            if (rotationAcceleration > 6000.0)
             {
-                rotationAcceleration = 20000.0;
+                rotationAcceleration = 6000.0;
             }
         }
 		if (Input.IsKeyPressed(Key.Left))
 		{
-			rotationAcceleration = -2000.0;
-			if (rotationAcceleration < -20000.0)
+			rotationAcceleration += -1500.0;
+			if (rotationAcceleration < -6000.0)
 			{
-				rotationAcceleration = -20000.0;
+				rotationAcceleration = -6000.0;
 			}
 		}
 		if (!(Input.IsKeyPressed(Key.Left) || Input.IsKeyPressed(Key.Right)))

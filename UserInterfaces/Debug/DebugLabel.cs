@@ -15,7 +15,10 @@ public partial class DebugLabel : Label
 		if (OS.IsDebugBuild())
 		{
 			Text = string.Empty;
-			Text += string.Format("Y: {0}\n", _rocketObject.Position.Y);
+            Text += string.Format("FPS: {0}\n", Engine.GetFramesPerSecond());
+
+
+            Text += string.Format("Y: {0}\n", _rocketObject.Position.Y);
 			Text += string.Format("X: {0}\n", _rocketObject.Position.X);
 
 			Text += string.Format("Y-Vel: {0}\n", _rocketObject.LinearVelocity.Y);

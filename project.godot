@@ -38,6 +38,10 @@ movie_writer/fps=120
 naming/scene_name_casing=1
 naming/script_name_casing=1
 
+[navigation]
+
+2d/default_cell_size=10.0
+
 [physics]
 
 2d/run_on_separate_thread=true
@@ -51,7 +55,7 @@ common/physics_jitter_fix=0.0
 2d/sleep_threshold_linear=0.0
 2d/sleep_threshold_angular=0.0
 2d/time_before_sleep=5.0
-2d/solver/solver_iterations=2048
+2d/solver/solver_iterations=1024
 2d/solver/contact_max_allowed_penetration=0.5
 
 [rendering]
@@ -59,6 +63,9 @@ common/physics_jitter_fix=0.0
 textures/canvas_textures/default_texture_filter=0
 textures/lossless_compression/force_png=true
 textures/webp_compression/compression_method=4
-anti_aliasing/quality/msaa_2d=2
+2d/shadow_atlas/size=1024
 textures/decals/filter=0
+environment/defaults/default_clear_color=Color(0.18359044, 0.18359047, 0.18359037, 1)
+textures/basis_universal/zstd_supercompression_level=8
+anti_aliasing/quality/use_debanding=true
 2d/sdf/oversize=2

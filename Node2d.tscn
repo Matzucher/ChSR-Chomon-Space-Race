@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://s7ujus3dj30p"]
+[gd_scene load_steps=26 format=3 uid="uid://s7ujus3dj30p"]
 
 [ext_resource type="PackedScene" uid="uid://o2g263jcv3pw" path="res://UserInterfaces/RocketControll/RocketControll.tscn" id="1_7sj0w"]
 [ext_resource type="PackedScene" uid="uid://obtc36mf2k2s" path="res://Properties/Gravity/GravitySysyemInit.tscn" id="1_l5lo4"]
@@ -7,21 +7,16 @@
 [ext_resource type="Texture2D" uid="uid://cplq713fdxfc3" path="res://sprites/rocket_test.png" id="3_7sj0w"]
 [ext_resource type="Script" uid="uid://xp8qyiedwtix" path="res://Camera2d.cs" id="5_x7la5"]
 [ext_resource type="Shader" uid="uid://42o6smcjq4dt" path="res://sprites/shaders/round_sphere.gdshader" id="6_x7la5"]
+[ext_resource type="Shader" uid="uid://cojnfq7sj8a5d" path="res://sprites/shaders/bacground-paralax.gdshader" id="8_6t028"]
+[ext_resource type="Script" uid="uid://b34hnvqdf0pyq" path="res://sprites/shaders/BacgroundStars.cs" id="9_0n22w"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l5lo4"]
 friction = 0.2
 
-[sub_resource type="GDScript" id="GDScript_7sj0w"]
-script/source = "extends SubViewport
-
-func _init():
-	print(\"Running the innit for minimap vievport!\")
-	
-"
-
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0n22w"]
+friction = 0.3
 rough = true
-bounce = 0.1
+bounce = 0.2
 absorbent = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tdydx"]
@@ -32,8 +27,7 @@ offsets = PackedFloat32Array(0, 0.15646258, 0.9047619, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.38928655, 0.38928664, 0.3892865, 1, 0.8732179, 0.8732179, 0.8732179, 1, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_k4h3j"]
-noise_type = 3
-frequency = 0.0205
+frequency = 0.0106
 domain_warp_type = 2
 domain_warp_amplitude = 0.8450000000011642
 domain_warp_frequency = 11.775000000008731
@@ -50,10 +44,18 @@ noise = SubResource("FastNoiseLite_k4h3j")
 [sub_resource type="CircleShape2D" id="CircleShape2D_wttx7"]
 radius = 16384.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6t028"]
+shader = ExtResource("8_6t028")
+shader_parameter/relativePosX = 0.0
+shader_parameter/relativePosY = 0.0
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0n22w"]
+size = Vector2(1024, 1024)
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6t028"]
-friction = 0.1
+friction = 0.25
 rough = true
-bounce = 0.1
+bounce = 0.3
 absorbent = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wttx7"]
@@ -65,17 +67,24 @@ colors = PackedColorArray(0, 0, 0, 1, 0.28485027, 0.28485027, 0.28485027, 1, 0.8
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_5bkv5"]
 noise_type = 3
-frequency = 0.0216
+frequency = 0.0133
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_k4h3j"]
 width = 4096
 height = 4096
 seamless = true
+as_normal_map = true
+bump_strength = 32.0
 color_ramp = SubResource("Gradient_tdydx")
 noise = SubResource("FastNoiseLite_5bkv5")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0n22w"]
 radius = 32768.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0n22w"]
+shader = ExtResource("8_6t028")
+shader_parameter/relativePosX = -0.10499999999592546
+shader_parameter/relativePosY = 0.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -93,7 +102,7 @@ can_sleep = false
 script = ExtResource("2_g0e52")
 
 [node name="Sprite2D" type="Sprite2D" parent="RocketObject"]
-rotation = -0.7941248096574199
+rotation = -0.7853981633974483
 scale = Vector2(0.0988441340819732, 0.096609758955363)
 texture = ExtResource("3_7sj0w")
 
@@ -102,16 +111,9 @@ limit_smoothed = true
 script = ExtResource("5_x7la5")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RocketObject"]
-polygon = PackedVector2Array(-10, 9, 11, 9, 21, 21, 24, -2, 17, -11, 16, -43, 1, -66, -14, -43, -15, -11, -23, -2, -20, 22)
+polygon = PackedVector2Array(-10, 9, 11, 9, 21, 21, 24, -2, 17, -11, 16, -46, 2, -66, -13, -46, -15, -11, -23, -2, -20, 22)
 
-[node name="minimap-vievport" type="SubViewport" parent="RocketObject"]
-script = SubResource("GDScript_7sj0w")
-
-[node name="minimap-temp" type="Camera2D" parent="RocketObject/minimap-vievport"]
-position = Vector2(575, 324)
-enabled = false
-zoom = Vector2(0.01000000000931322, 0.01000000000931322)
-limit_enabled = false
+[node name="AudioListener2D" type="AudioListener2D" parent="RocketObject"]
 
 [node name="test_space_objects" type="Node2D" parent="."]
 
@@ -295,9 +297,13 @@ texture = SubResource("NoiseTexture2D_csket")
 shape = SubResource("CircleShape2D_wttx7")
 debug_color = Color(0, 0.6, 0.69803923, 0)
 
-[node name="test-large-moon" type="RigidBody2D" parent="."]
-position = Vector2(50944, 42240)
-mass = 1000000.0000000001
+[node name="Sprite2D" type="Sprite2D" parent="test_space_objects"]
+material = SubResource("ShaderMaterial_6t028")
+position = Vector2(5804, -2675)
+texture = SubResource("PlaceholderTexture2D_0n22w")
+
+[node name="test-large-moon" type="StaticBody2D" parent="."]
+position = Vector2(45824, 47360)
 physics_material_override = SubResource("PhysicsMaterial_6t028")
 
 [node name="Sprite2D" type="Sprite2D" parent="test-large-moon"]
@@ -308,3 +314,14 @@ texture = SubResource("NoiseTexture2D_k4h3j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="test-large-moon"]
 shape = SubResource("CircleShape2D_0n22w")
 debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="bacrgound-sky-container" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="bacground-stars" type="ColorRect" parent="bacrgound-sky-container"]
+material = SubResource("ShaderMaterial_0n22w")
+offset_left = -392.0
+offset_top = -437.0
+offset_right = 3704.0
+offset_bottom = 3659.0
+script = ExtResource("9_0n22w")
