@@ -7,7 +7,14 @@
 
 [sub_resource type="Environment" id="Environment_q2d71"]
 background_mode = 3
+ambient_light_source = 1
+tonemap_mode = 3
+tonemap_exposure = 0.75
 glow_enabled = true
+glow_levels/4 = 1.0
+glow_intensity = 0.98
+glow_bloom = 0.09
+glow_blend_mode = 1
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_uo7di"]
 dof_blur_far_distance = 9.05
@@ -28,7 +35,7 @@ shader = ExtResource("4_y7y61")
 
 [sub_resource type="Gradient" id="Gradient_5bkv5"]
 offsets = PackedFloat32Array(0, 0.15646258, 0.9047619, 1)
-colors = PackedColorArray(0, 0, 0, 1, 0.38928655, 0.38928664, 0.3892865, 1, 0.8732179, 0.8732179, 0.8732179, 1, 1, 1, 1, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.38928655, 0.38928664, 0.3892865, 1, 0.8627451, 0.8627451, 0.8627451, 1, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_k4h3j"]
 noise_type = 3
@@ -41,6 +48,7 @@ domain_warp_fractal_octaves = 3
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8l3nt"]
 width = 2048
 height = 2048
+generate_mipmaps = false
 seamless = true
 seamless_blend_skirt = 0.03
 color_ramp = SubResource("Gradient_5bkv5")
@@ -79,11 +87,11 @@ polygon = PackedVector2Array(-10, 9, 9, 9, 20, 22, 22, -3, 16, -11, 15, -43, 1, 
 
 [node name="Polygon2D" type="Polygon2D" parent="RocketObject"]
 position = Vector2(0, 20)
-color = Color(3.9438255, 2.227904, 0.7386137, 1)
+color = Color(18.892157, 10.792825, 3.6794968, 1)
 polygon = PackedVector2Array(0, 17, 2, 10, 2, 0, 3, 3, 5, 11, 6, 0, 6, -11, -5, -11, -5, -3, -4, 10, -3, 9, -2, 3, 0, 12)
 
 [node name="space_object_test" type="RigidBody2D" parent="."]
-position = Vector2(7686, -18380)
+position = Vector2(13488, -10033)
 mass = 100000.0
 physics_material_override = SubResource("PhysicsMaterial_ti1bm")
 can_sleep = false
@@ -98,7 +106,7 @@ shape = SubResource("CircleShape2D_kwl8l")
 debug_color = Color(0, 0.6, 0.69803923, 0)
 
 [node name="space_object_test2" type="RigidBody2D" parent="."]
-position = Vector2(-17326, 15599)
+position = Vector2(-12586, 10498)
 mass = 100000.0
 physics_material_override = SubResource("PhysicsMaterial_ti1bm")
 can_sleep = false

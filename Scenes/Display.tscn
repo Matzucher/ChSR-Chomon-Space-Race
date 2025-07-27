@@ -42,6 +42,7 @@ grow_vertical = 2
 disable_3d = true
 handle_input_locally = false
 use_debanding = true
+use_hdr_2d = true
 anisotropic_filtering_level = 0
 sdf_oversize = 2
 sdf_scale = 0
@@ -50,5 +51,6 @@ positional_shadow_atlas_quad_1 = 1
 positional_shadow_atlas_quad_2 = 2
 positional_shadow_atlas_quad_3 = 3
 size = Vector2i(1140, 640)
+render_target_update_mode = 4
 
 [node name="World" parent="ViewportControl/Viewports/WorldViewport" instance=ExtResource("3_dt7qm")]
