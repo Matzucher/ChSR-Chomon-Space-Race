@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c03bhivbomssl" path="res://UserInterfaces/mainMenu/MainMenu.cs" id="1_47ape"]
 
+
 [node name="mainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15

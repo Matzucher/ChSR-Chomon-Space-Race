@@ -15,6 +15,10 @@ run/main_scene="uid://cy7lgdurjxhav"
 config/features=PackedStringArray("4.5", "C#", "Double Precision", "Forward Plus")
 config/icon="res://sprites/icon.svg"
 
+[autoload]
+
+Global="*res://Src/THE_AUTOLOAD_SCRIPTS/Globals.cs"
+
 [debug]
 
 gdscript/warnings/exclude_addons=false
@@ -26,6 +30,7 @@ window/size/viewport_height=512
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 window/vsync/vsync_mode=2
+window/sdf/scale=0
 
 [dotnet]
 
@@ -57,6 +62,4 @@ common/physics_jitter_fix=0.0
 textures/canvas_textures/default_texture_filter=0
 textures/lossless_compression/force_png=true
 textures/webp_compression/compression_method=4
-anti_aliasing/quality/msaa_2d=2
 textures/decals/filter=0
-2d/sdf/oversize=2

@@ -19,7 +19,7 @@ public partial class MainMenu : Control
 
     private void startPressed()
     {
-        var nextScene = (PackedScene)ResourceLoader.Load("res://Node2d.tscn");
+        var nextScene = (PackedScene)ResourceLoader.Load("res://Scenes/Display.tscn");
         GetTree().ChangeSceneToPacked(nextScene);
         GD.Print("Nacisnieto start!");
     }
