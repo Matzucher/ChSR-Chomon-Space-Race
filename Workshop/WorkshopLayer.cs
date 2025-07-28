@@ -7,11 +7,11 @@ public partial class WorkshopLayer : CanvasLayer
     {
         if (Globals.Instance.currentViewport == Globals.Viewport.Workshop)
         {
-            Layer = 1;
+            Visible = true;
         }
         else
         {
-            Layer = 0;
+            Visible = false;
         }
     }
 }

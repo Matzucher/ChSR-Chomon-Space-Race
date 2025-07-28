@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://s7ujus3dj30p"]
+[gd_scene load_steps=11 format=3 uid="uid://s7ujus3dj30p"]
 
 [ext_resource type="Script" uid="uid://2d1ol47w37ax" path="res://Workshop/WorkshopLayer.cs" id="1_dt7qm"]
 [ext_resource type="PackedScene" uid="uid://o2g263jcv3pw" path="res://UserInterfaces/RocketControll/RocketControll.tscn" id="1_wj2rf"]
+[ext_resource type="Shader" uid="uid://dn8il7mxaspl2" path="res://sprites/shaders/BacgroundParalaxStars.tres" id="1_wvyg2"]
 [ext_resource type="PackedScene" uid="uid://cuwy2ohhf2n2g" path="res://UserInterfaces/Debug/DebugView.tscn" id="2_dsbhr"]
 [ext_resource type="PackedScene" uid="uid://dt36jcc20k55v" path="res://Scenes/World.tscn" id="3_dt7qm"]
 [ext_resource type="PackedScene" uid="uid://do4hm3p51oj22" path="res://Workshop/Workshop.tscn" id="4_dsbhr"]
@@ -26,6 +27,9 @@ dof_blur_near_distance = 1.0
 
 [sub_resource type="Compositor" id="Compositor_lcvy2"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lcvy2"]
+shader = ExtResource("1_wvyg2")
+
 [node name="Node2D" type="Node2D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -33,8 +37,20 @@ environment = SubResource("Environment_dt7qm")
 camera_attributes = SubResource("CameraAttributesPractical_wvyg2")
 compositor = SubResource("Compositor_lcvy2")
 
-[node name="WorkshopLayer" type="CanvasLayer" parent="."]
+[node name="ParalaxStarsBacgroundLayer" type="CanvasLayer" parent="."]
 layer = 0
+
+[node name="StarsParalaxShader" type="ColorRect" parent="ParalaxStarsBacgroundLayer"]
+material = SubResource("ShaderMaterial_lcvy2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="WorkshopLayer" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("1_dt7qm")
 
 [node name="Viewports" type="SubViewportContainer" parent="WorkshopLayer"]
@@ -57,12 +73,13 @@ handle_input_locally = false
 use_debanding = true
 use_hdr_2d = true
 anisotropic_filtering_level = 0
+audio_listener_enable_2d = true
 positional_shadow_atlas_quad_0 = 1
 positional_shadow_atlas_quad_1 = 1
 positional_shadow_atlas_quad_2 = 2
 positional_shadow_atlas_quad_3 = 3
 size = Vector2i(912, 512)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="Workshop" parent="WorkshopLayer/Viewports/WorkshopViewport" instance=ExtResource("4_dsbhr")]
 position = Vector2(-98, 16)
@@ -90,10 +107,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="WorldViewport" type="SubViewport" parent="WorldLayer/Viewports"]
 disable_3d = true
+transparent_bg = true
 handle_input_locally = false
 use_debanding = true
 use_hdr_2d = true
 anisotropic_filtering_level = 0
+audio_listener_enable_2d = true
 sdf_oversize = 2
 sdf_scale = 0
 positional_shadow_atlas_quad_0 = 1
