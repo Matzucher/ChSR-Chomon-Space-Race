@@ -47,6 +47,18 @@ public partial class Globals : Node
 
     public double playerShipMaxAcceleration { get; set; }
     public double playerShipNewAcceleration { get; set; }
+
+
+
+    public enum Viewport
+    {
+        World,
+        Workshop
+    }
+
+    public Viewport currentViewport = Viewport.World;
+
+
     public override void _Ready()
     {
         playerShipNewAcceleration = 0.0;

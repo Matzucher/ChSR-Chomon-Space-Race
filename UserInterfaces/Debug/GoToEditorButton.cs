@@ -11,6 +11,6 @@ public partial class GoToEditorButton : Button
 
 	private new void ButtonPressed()
 	{
-		GetTree().ChangeSceneToFile("res://Workshop/Workshop.tscn");
+		Globals.Instance.currentViewport = Globals.Viewport.Workshop;
 	}
 }
