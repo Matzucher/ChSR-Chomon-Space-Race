@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbcoglv72li28"]
+
+[ext_resource type="Texture2D" uid="uid://brcbx2ipa1n3" path="res://sprites/fueltank.png" id="1_bcjdx"]
+[ext_resource type="Script" uid="uid://duh2prd4m1c87" path="res://WorldScripts/ConnectionComponent.cs" id="2_3wesl"]
+[ext_resource type="Script" uid="uid://cmipv7ljyuyjb" path="res://Workshop/WorkshopMovementComponent.cs" id="2_c7uy1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ke2u"]
+
+[node name="FuelTank" type="StaticBody2D"]
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_bcjdx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.6000000000058208, 1.6000000000058208)
+shape = SubResource("RectangleShape2D_7ke2u")
+
+[node name="ConnectionComponent" type="Node" parent="."]
+script = ExtResource("2_3wesl")
+
+[node name="WorkshopMovementComponent" type="Area2D" parent="." groups=["WorkshopMovementComponents"]]
+script = ExtResource("2_c7uy1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorkshopMovementComponent"]
+scale = Vector2(1.6000000000058208, 1.6000000000058208)
+shape = SubResource("RectangleShape2D_7ke2u")
+
+[node name="Marker2D" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(16, -10.666666666666666)
+
+[node name="Marker2D2" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(16, 0)
+
+[node name="Marker2D3" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(16, 10.666666666666668)
+
+[node name="Marker2D4" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(-16, -10.666666666666666)
+
+[node name="Marker2D5" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(-16, 0)
+
+[node name="Marker2D6" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(-16, 10.666666666666668)
+
+[node name="Marker2D7" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(10.66700000000128, 16)
+
+[node name="Marker2D8" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(-10.66700000000128, 16)
+
+[node name="Marker2D9" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(3.552713678800501e-15, 16)
+scale = Vector2(0.9999999999999999, 0.9999999999999999)
+
+[node name="Marker2D10" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(10.667333333335895, -16)
+
+[node name="Marker2D11" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(-10.666666666666666, -16)
+
+[node name="Marker2D12" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(0.00033333333461627035, -16.000000000000007)
+scale = Vector2(0.9999999999999998, 0.9999999999999998)

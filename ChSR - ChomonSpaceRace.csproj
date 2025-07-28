@@ -4,4 +4,8 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>ChSRChomonSpaceRace</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Workshop\Objects\**" />
+    <EmbeddedResource Remove="Workshop\Objects\**" />
+  </ItemGroup>
 </Project>
