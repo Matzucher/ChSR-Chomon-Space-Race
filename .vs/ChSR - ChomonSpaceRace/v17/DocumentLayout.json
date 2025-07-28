@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\workshopmovementcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\workshopmovementcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\userinterfaces\\workshop\\assemblerocket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\workshop\\assemblerocket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\worldscripts\\connectioncomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:worldscripts\\connectioncomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\userinterfaces\\debug\\gotoeditorbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\debug\\gotoeditorbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\workshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\workshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\workshopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,24 +27,20 @@
       "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\workshop\\spawnobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\workshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\workshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\workshopmovementcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\workshopmovementcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\workshopcamera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\workshopcamera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\userinterfaces\\debug\\gotoeditorbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:userinterfaces\\debug\\gotoeditorbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|c:\\users\\mati\\documents\\chsr---chomon-space-race\\chsr-chomon-space-race\\workshop\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4940B98-11D8-45E0-9FDB-EFE86C02B581}|ChSR - ChomonSpaceRace.csproj|solutionrelative:workshop\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,33 +62,57 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AssembleRocket.cs",
+              "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\Workshop\\AssembleRocket.cs",
+              "RelativeDocumentMoniker": "UserInterfaces\\Workshop\\AssembleRocket.cs",
+              "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\Workshop\\AssembleRocket.cs",
+              "RelativeToolTip": "UserInterfaces\\Workshop\\AssembleRocket.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T12:01:47.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ConnectionComponent.cs",
+              "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\WorldScripts\\ConnectionComponent.cs",
+              "RelativeDocumentMoniker": "WorldScripts\\ConnectionComponent.cs",
+              "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\WorldScripts\\ConnectionComponent.cs",
+              "RelativeToolTip": "WorldScripts\\ConnectionComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T10:13:33.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "WorkshopManager.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopManager.cs",
               "RelativeDocumentMoniker": "Workshop\\WorkshopManager.cs",
               "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopManager.cs",
               "RelativeToolTip": "Workshop\\WorkshopManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T10:18:26.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T10:18:26.95Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SpawnObject.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\Workshop\\SpawnObject.cs",
               "RelativeDocumentMoniker": "UserInterfaces\\Workshop\\SpawnObject.cs",
               "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\Workshop\\SpawnObject.cs",
               "RelativeToolTip": "UserInterfaces\\Workshop\\SpawnObject.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwBEAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwBYAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T16:56:18.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T16:56:18.23Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Grid.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\Grid.cs",
               "RelativeDocumentMoniker": "Workshop\\Grid.cs",
@@ -88,21 +120,19 @@
               "RelativeToolTip": "Workshop\\Grid.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T14:20:36.892Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T14:20:36.892Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "WorkshopMovementComponent.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopMovementComponent.cs",
               "RelativeDocumentMoniker": "Workshop\\WorkshopMovementComponent.cs",
               "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopMovementComponent.cs",
               "RelativeToolTip": "Workshop\\WorkshopMovementComponent.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwCsAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAF0AAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T13:56:38.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T13:56:38.011Z"
             },
             {
               "$type": "Document",
@@ -112,26 +142,27 @@
               "RelativeDocumentMoniker": "Workshop\\Workshop.cs",
               "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\Workshop.cs",
               "RelativeToolTip": "Workshop\\Workshop.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-21T12:58:15.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "GoToEditorButton.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\GoToEditorButton.cs",
               "RelativeDocumentMoniker": "UserInterfaces\\Debug\\GoToEditorButton.cs",
               "ToolTip": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\UserInterfaces\\Debug\\GoToEditorButton.cs",
               "RelativeToolTip": "UserInterfaces\\Debug\\GoToEditorButton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:36:01.697Z"
+              "WhenOpened": "2025-06-11T09:36:01.697Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Camera2d.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Camera2d.cs",
               "RelativeDocumentMoniker": "Camera2d.cs",
@@ -143,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "WorkshopCamera2d.cs",
               "DocumentMoniker": "C:\\Users\\Mati\\Documents\\ChSR---Chomon-Space-Race\\ChSR-Chomon-Space-Race\\Workshop\\WorkshopCamera2d.cs",
               "RelativeDocumentMoniker": "Workshop\\WorkshopCamera2d.cs",
@@ -151,8 +182,7 @@
               "RelativeToolTip": "Workshop\\WorkshopCamera2d.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T09:26:56.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T09:26:56.547Z"
             }
           ]
         }

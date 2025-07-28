@@ -1,10 +1,13 @@
 using Godot;
 using System;
+using System.Threading;
 
 public partial class SpawnObject : Area2D
 {
 	StaticBody2D workshobObject;
 	WorkshopManager workshopManager;
+
+	int nextObjecIndexNumber = 1;
 
 	public override void _Ready()
 	{
@@ -16,7 +19,9 @@ public partial class SpawnObject : Area2D
 	{
 		if (@event is InputEventMouseButton mouseEvent && mouseEvent.Pressed && mouseEvent.ButtonIndex == MouseButton.Left)
 		{
-			workshopManager.EmitSignal("ItemSelected", GetName());
+			GD.Print("nacisnieto ", GetName());
+			workshopManager.EmitSignal("ItemSelected", GetName(), nextObjecIndexNumber);
+			nextObjecIndexNumber++;
 		}
 	}
 }

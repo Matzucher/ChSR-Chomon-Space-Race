@@ -15,6 +15,10 @@ run/main_scene="uid://s7ujus3dj30p"
 config/features=PackedStringArray("4.5", "C#", "Double Precision", "Forward Plus")
 config/icon="res://sprites/icon.svg"
 
+[autoload]
+
+WorkshopGlobals="*res://Src/TheAutoloadScripts/WorkshopGlobals.cs"
+
 [debug]
 
 gdscript/warnings/exclude_addons=false
@@ -35,6 +39,10 @@ project/assembly_name="ChSR - ChomonSpaceRace"
 
 naming/scene_name_casing=1
 naming/script_name_casing=1
+
+[global_group]
+
+WorkshopMovementComponents="Markers in Workshop"
 
 [physics]
 

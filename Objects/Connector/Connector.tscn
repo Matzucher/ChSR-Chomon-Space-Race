@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnn14muw2l3by"]
+[gd_scene load_steps=6 format=3 uid="uid://cnn14muw2l3by"]
 
 [ext_resource type="Texture2D" uid="uid://7q3vje5l6h7" path="res://sprites/Connector.png" id="1_g4sgt"]
+[ext_resource type="Script" uid="uid://duh2prd4m1c87" path="res://WorldScripts/ConnectionComponent.cs" id="2_qu8b6"]
 [ext_resource type="Script" uid="uid://cmipv7ljyuyjb" path="res://Workshop/WorkshopMovementComponent.cs" id="2_sxr5a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ca7r"]
@@ -19,10 +20,25 @@ texture = ExtResource("1_g4sgt")
 position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_5ca7r")
 
-[node name="WorkshopMovementComponent" type="Area2D" parent="."]
+[node name="ConnectionComponent" type="Node" parent="."]
+script = ExtResource("2_qu8b6")
+
+[node name="WorkshopMovementComponent" type="Area2D" parent="." groups=["WorkshopMovementComponents"]]
 script = ExtResource("2_sxr5a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorkshopMovementComponent"]
 position = Vector2(-2.910383045683958e-11, 15.999999999970896)
 scale = Vector2(1.6000000000058208, 1.6000000000058208)
 shape = SubResource("RectangleShape2D_qu8b6")
+
+[node name="Marker2D" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(-16, 0)
+
+[node name="Marker2D2" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(16, 0)
+
+[node name="Marker2D3" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(16, 32)
+
+[node name="Marker2D4" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(-16, 32)
