@@ -9,11 +9,18 @@ public partial class EnginePowerSlider : VSlider
 
 	public override void _ValueChanged(double accelerationPercentage)
 	{
-		_rocketObject = GetNode<RigidBody2D>("/root/Node2D/RocketObject");
-		var maxAcceleration = (double)_rocketObject.Get("maxAcceleration");
-		_rocketObject.Call("ChangeAcceleration",maxAcceleration*(accelerationPercentage/100));
+        //_rocketObject = GetNode<RigidBody2D>("/root/Node2D/RocketObject");
+        //var maxAcceleration = (double)_rocketObject.Get("maxAcceleration");
+        //_rocketObject.Call("ChangeAcceleration",maxAcceleration*(accelerationPercentage/100));
 
-		_label = GetNode<Label>("EnginePowerSliderLabel");
+        double maxAcceleration = Globals.Instance.playerShipMaxAcceleration;
+        if (accelerationPercentage < 0.01)
+        {
+            accelerationPercentage = 0.0;
+        }
+        Globals.Instance.playerShipNewAcceleration = maxAcceleration * (accelerationPercentage / 100);
+
+        _label = GetNode<Label>("EnginePowerSliderLabel");
 		_label.Text = Convert.ToString(Math.Round(accelerationPercentage, 1));
 		
 	}
