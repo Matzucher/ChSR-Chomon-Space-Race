@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://s7ujus3dj30p"]
+[gd_scene load_steps=5 format=3 uid="uid://s7ujus3dj30p"]
 
 [ext_resource type="PackedScene" uid="uid://o2g263jcv3pw" path="res://UserInterfaces/RocketControll/RocketControll.tscn" id="1_wj2rf"]
 [ext_resource type="PackedScene" uid="uid://cuwy2ohhf2n2g" path="res://UserInterfaces/Debug/DebugView.tscn" id="2_dsbhr"]
 [ext_resource type="PackedScene" uid="uid://dt36jcc20k55v" path="res://Scenes/World.tscn" id="3_dt7qm"]
+[ext_resource type="PackedScene" uid="uid://do4hm3p51oj22" path="res://Workshop/Workshop.tscn" id="4_dsbhr"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -10,35 +11,24 @@
 
 [node name="DebugViewUI" parent="." instance=ExtResource("2_dsbhr")]
 
-[node name="ViewportControl" type="Control" parent="."]
-layout_mode = 3
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="Viewports" type="SubViewportContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="Viewports" type="SubViewportContainer" parent="ViewportControl"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -134.0
-offset_top = -84.0
-offset_right = 1006.0
-offset_bottom = 556.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="WorldViewport" type="SubViewport" parent="ViewportControl/Viewports"]
+[node name="WorldViewport" type="SubViewport" parent="CanvasLayer/Viewports"]
 disable_3d = true
 handle_input_locally = false
 use_debanding = true
@@ -53,4 +43,13 @@ positional_shadow_atlas_quad_3 = 3
 size = Vector2i(1140, 640)
 render_target_update_mode = 4
 
-[node name="World" parent="ViewportControl/Viewports/WorldViewport" instance=ExtResource("3_dt7qm")]
+[node name="World" parent="CanvasLayer/Viewports/WorldViewport" instance=ExtResource("3_dt7qm")]
+position = Vector2(113, 88)
+
+[node name="Workszop" type="SubViewport" parent="CanvasLayer/Viewports"]
+disable_3d = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Workshop" parent="CanvasLayer/Viewports/Workszop" instance=ExtResource("4_dsbhr")]
+position = Vector2(-98, 16)

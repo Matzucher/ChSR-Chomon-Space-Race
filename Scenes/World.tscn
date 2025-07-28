@@ -7,16 +7,15 @@
 
 [sub_resource type="Environment" id="Environment_q2d71"]
 background_mode = 3
-ambient_light_source = 1
 tonemap_mode = 3
-tonemap_exposure = 0.75
 glow_enabled = true
 glow_levels/4 = 1.0
-glow_intensity = 0.98
-glow_bloom = 0.09
+glow_normalized = true
+glow_bloom = 0.1
 glow_blend_mode = 1
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_uo7di"]
+auto_exposure_enabled = true
 dof_blur_far_distance = 9.05
 dof_blur_near_distance = 1.0
 

@@ -13,6 +13,7 @@ config_version=5
 config/name="ChSR - ChomonSpaceRace"
 run/main_scene="uid://cy7lgdurjxhav"
 config/features=PackedStringArray("4.5", "C#", "Double Precision", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://sprites/icon.svg"
 
 [autoload]
@@ -27,8 +28,8 @@ gdscript/warnings/exclude_addons=false
 
 window/size/viewport_width=912
 window/size/viewport_height=512
-window/stretch/mode="viewport"
-window/stretch/aspect="keep_height"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/vsync/vsync_mode=2
 window/sdf/scale=0
 
@@ -62,4 +63,5 @@ common/physics_jitter_fix=0.0
 textures/canvas_textures/default_texture_filter=0
 textures/lossless_compression/force_png=true
 textures/webp_compression/compression_method=4
+viewport/hdr_2d=true
 textures/decals/filter=0
