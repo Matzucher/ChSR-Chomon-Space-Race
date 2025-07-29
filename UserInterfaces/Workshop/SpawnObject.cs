@@ -4,14 +4,14 @@ using System.Threading;
 
 public partial class SpawnObject : Area2D
 {
-	StaticBody2D workshobObject;
+	StaticBody2D workshopObject;
 	WorkshopManager workshopManager;
 
 	int nextObjecIndexNumber = 1;
 
 	public override void _Ready()
 	{
-		workshopManager = GetNode<WorkshopManager>("/root/Workshop/WorkshopManager");
+		workshopManager = GetNode<WorkshopManager>("../../../../WorkshopManager");
 	}
 
 

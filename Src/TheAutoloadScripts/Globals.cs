@@ -55,9 +55,14 @@ public partial class Globals : Node
         World,
         Workshop
     }
+    public enum Camera2d
+    {
+        WorldCamera2d,
+        WorkshopCamera2d
+    }
 
     public Viewport currentViewport = Viewport.World;
-
+    public Camera2d currentCamera2d = Camera2d.WorldCamera2d;
 
     public override void _Ready()
     {

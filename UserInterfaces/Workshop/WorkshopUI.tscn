@@ -6,13 +6,13 @@
 [ext_resource type="Script" uid="uid://nub8ktqu0u1o" path="res://UserInterfaces/Workshop/AssembleRocket.cs" id="4_au2g6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7wlx6"]
-size = Vector2(80, 128)
+size = Vector2(128, 128)
 
 [node name="WorkshopUi" type="Control"]
 layout_mode = 3
 anchor_right = 1.0
 anchor_bottom = 0.996
-offset_bottom = 0.19600000000002638
+offset_bottom = 0.1960000000000264
 grow_horizontal = 2
 grow_vertical = 2
 
