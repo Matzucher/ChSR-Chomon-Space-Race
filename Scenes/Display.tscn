@@ -5,7 +5,7 @@
 [ext_resource type="Shader" uid="uid://dn8il7mxaspl2" path="res://sprites/shaders/BacgroundParalaxStars.tres" id="1_wvyg2"]
 [ext_resource type="PackedScene" uid="uid://cuwy2ohhf2n2g" path="res://UserInterfaces/Debug/DebugView.tscn" id="2_dsbhr"]
 [ext_resource type="PackedScene" uid="uid://dt36jcc20k55v" path="res://Scenes/World.tscn" id="3_dt7qm"]
-[ext_resource type="PackedScene" uid="uid://do4hm3p51oj22" path="res://Workshop/Workshop.tscn" id="4_dsbhr"]
+[ext_resource type="PackedScene" uid="uid://b7jlwa1fkadis" path="res://Workshop/Workshop.tscn" id="4_dsbhr"]
 
 [sub_resource type="Environment" id="Environment_dt7qm"]
 background_mode = 3
@@ -31,6 +31,7 @@ dof_blur_near_distance = 1.0
 shader = ExtResource("1_wvyg2")
 
 [node name="Node2D" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-944.0]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dt7qm")
@@ -69,11 +70,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="WorkshopViewport" type="SubViewport" parent="WorkshopLayer/Viewports"]
 disable_3d = true
-handle_input_locally = false
 use_debanding = true
 use_hdr_2d = true
 anisotropic_filtering_level = 0
 audio_listener_enable_2d = true
+physics_object_picking = true
 positional_shadow_atlas_quad_0 = 1
 positional_shadow_atlas_quad_1 = 1
 positional_shadow_atlas_quad_2 = 2
@@ -108,7 +109,6 @@ metadata/_edit_use_anchors_ = true
 [node name="WorldViewport" type="SubViewport" parent="WorldLayer/Viewports"]
 disable_3d = true
 transparent_bg = true
-handle_input_locally = false
 use_debanding = true
 use_hdr_2d = true
 anisotropic_filtering_level = 0

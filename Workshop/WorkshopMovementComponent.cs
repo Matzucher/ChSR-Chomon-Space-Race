@@ -25,8 +25,8 @@ public partial class WorkshopMovementComponent : Area2D
 		}
 		GD.Print("Found " + markers.Count + " Marker2D nodes.");
 
-		workshopScene = GetNode<Node2D>("/root/Workshop");
-		workshopManager = GetNode<WorkshopManager>("/root/Workshop/WorkshopManager");
+		workshopScene = GetNode<Node2D>("../../");
+		workshopManager = GetNode<WorkshopManager>("../../WorkshopManager");
 		workshopObject = GetParent<StaticBody2D>();
 		connectionComponent = GetParent().GetNode<ConnectionComponent>("ConnectionComponent");
 		GD.Print("MovementComponent ", GetParent().GetName(), " My Parent is ", GetParent().GetParent().GetName());

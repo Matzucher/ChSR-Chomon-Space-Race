@@ -12,5 +12,7 @@ public partial class GoToEditorButton : Button
 	private new void ButtonPressed()
 	{
 		Globals.Instance.currentViewport = Globals.Viewport.Workshop;
-	}
+        
+
+    }
 }

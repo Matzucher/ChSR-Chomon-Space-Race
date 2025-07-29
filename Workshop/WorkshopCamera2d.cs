@@ -9,6 +9,11 @@ public partial class WorkshopCamera2d : Camera2D
 	Vector2 screenStartPosition = new Vector2(0, 0);
 	bool dragging = false;
 
+	public override void _Ready()
+	{
+		GD.Print(IsCurrent());
+	}
+
 	public override void _Input(InputEvent @event)
 	{
 		if (@event is InputEventMouseButton mouseEvent && mouseEvent.Pressed)

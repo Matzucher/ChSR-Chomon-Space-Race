@@ -14,7 +14,7 @@ public partial class AssembleRocket : Button
 
 	private new void ButtonPressed()
 	{
-		workshopObjects = GetNode<Node>("/root/Workshop").GetChildren().OfType<StaticBody2D>().ToList();
+		workshopObjects = GetNode<Node>("../../../").GetChildren().OfType<StaticBody2D>().ToList();
 		List<RigidBody2D> newBodies = new List<RigidBody2D>();
 		while(workshopObjects.Count > 0)
 		{
@@ -36,12 +36,14 @@ public partial class AssembleRocket : Button
 			}
 			newBodies.Add(newBody);
 		}
-		//newBodies.FirstOrDefault().AddChild(Kamera);
-		//GetTree().ChangeSceneToFile("res://Node2d.tscn");
+
 		foreach (RigidBody2D newBody in newBodies)
 		{
-			//GetTree().Root.GetNode("Node2d").AddChild(newBody);
+			//var a = GetNode("/root/Node2D/WorldLayer/Viewports/WorldViewport/World").GetChildren();
+
+            GetNode<Node2D>("/root/Node2D/WorldLayer/Viewports/WorldViewport/World").AddChild(newBody);
 		}
 		GD.Print("Materialized ", newBodies.Count, " Bodies");
-	}
+        Globals.Instance.currentViewport = Globals.Viewport.World;
+    }
 }

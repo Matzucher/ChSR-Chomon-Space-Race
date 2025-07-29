@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Camera2d : Camera2D
+public partial class WorldCamera2d : Camera2D
 {
 	Vector2 maxZoom = new Vector2(2, 2);
 	Vector2 zoomVelocity = new Vector2(0.9, 0.9);

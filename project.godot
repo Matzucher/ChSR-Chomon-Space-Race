@@ -18,7 +18,8 @@ config/icon="res://sprites/icon.svg"
 
 [autoload]
 
-Global="*res://Src/THE_AUTOLOAD_SCRIPTS/Globals.cs"
+WorkshopGlobals="*res://Src/TheAutoloadScripts/WorkshopGlobals.cs"
+Globals="*res://Src/TheAutoloadScripts/Globals.cs"
 
 [debug]
 
@@ -70,5 +71,7 @@ textures/webp_compression/compression_method=4
 environment/ssao/quality=1
 environment/ssil/quality=1
 viewport/hdr_2d=true
+anti_aliasing/quality/msaa_2d=2
 textures/decals/filter=0
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+2d/sdf/oversize=2
