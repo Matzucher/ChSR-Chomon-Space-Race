@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djk6kvdplebbo" path="res://testObjects/RocketObject.cs" id="1_gjpho"]
 [ext_resource type="Texture2D" uid="uid://cplq713fdxfc3" path="res://sprites/rocket_test.png" id="2_p70al"]
-[ext_resource type="Script" uid="uid://xp8qyiedwtix" path="res://Camera2d.cs" id="3_45d1s"]
+[ext_resource type="Script" uid="uid://cq231a55n0f30" path="res://WorldCamera2d.cs" id="3_gjpho"]
 [ext_resource type="PackedScene" uid="uid://brvocr6jh2b63" path="res://testObjects/SpaceObjectTest.tscn" id="5_y7y61"]
 
 [sub_resource type="Environment" id="Environment_p70al"]
@@ -28,7 +28,7 @@ glow_hdr_luminance_cap = 64.0
 friction = 0.2
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gjpho"]
-polygon = PackedVector2Array(-9, 7, 11, 7, 16, -11, 14, -45, 2, -64, -11, -45, -14, -10)
+polygon = PackedVector2Array(-8, 7, 11, 7, 17, -11, 18, -29, 15, -46, 9, -58, 3, -65, -4, -57, -10, -46, -14, -29, -13, -10)
 
 [sub_resource type="Gradient" id="Gradient_gjpho"]
 interpolation_mode = 2
@@ -65,24 +65,24 @@ texture = ExtResource("2_p70al")
 [node name="Camera2D" type="Camera2D" parent="RocketObject"]
 limit_enabled = false
 limit_smoothed = true
-script = ExtResource("3_45d1s")
+script = ExtResource("3_gjpho")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RocketObject"]
 position = Vector2(1, 0)
 polygon = PackedVector2Array(-10, 9, 9, 9, 20, 22, 22, -3, 16, -11, 15, -43, 1, -66, -14, -43, -16, -11, -23, -3, -22, 22)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="RocketObject"]
-position = Vector2(0, 1)
+position = Vector2(-1, 1)
 occluder = SubResource("OccluderPolygon2D_gjpho")
 
 [node name="PointLight2D2" type="PointLight2D" parent="RocketObject"]
-position = Vector2(0, 26)
+position = Vector2(0, 33)
 energy = 3.0700000000000003
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_p70al")
 
 [node name="PointLight2D" type="PointLight2D" parent="RocketObject"]
-position = Vector2(1, 28)
+position = Vector2(0, 24)
 energy = 1.26
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_p70al")
