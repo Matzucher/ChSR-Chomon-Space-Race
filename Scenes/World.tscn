@@ -33,7 +33,7 @@ polygon = PackedVector2Array(-8, 7, 11, 7, 17, -11, 18, -29, 15, -46, 9, -58, 3,
 [sub_resource type="Gradient" id="Gradient_gjpho"]
 interpolation_mode = 2
 offsets = PackedFloat32Array(0, 0.9910714)
-colors = PackedColorArray(1, 0.8901961, 0.75686276, 1, 0, 0, 0, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_p70al"]
 gradient = SubResource("Gradient_gjpho")
@@ -63,6 +63,7 @@ scale = Vector2(0.0988441340819732, 0.096609758955363)
 texture = ExtResource("2_p70al")
 
 [node name="Camera2D" type="Camera2D" parent="RocketObject"]
+zoom = Vector2(2, 2)
 limit_enabled = false
 limit_smoothed = true
 script = ExtResource("3_gjpho")
@@ -77,12 +78,14 @@ occluder = SubResource("OccluderPolygon2D_gjpho")
 
 [node name="PointLight2D2" type="PointLight2D" parent="RocketObject"]
 position = Vector2(0, 33)
+color = Color(0.9647059, 0.6313726, 0, 1)
 energy = 3.0700000000000003
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_p70al")
 
 [node name="PointLight2D" type="PointLight2D" parent="RocketObject"]
 position = Vector2(0, 24)
+color = Color(0.9635195, 0.6322405, 0, 1)
 energy = 1.26
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_p70al")

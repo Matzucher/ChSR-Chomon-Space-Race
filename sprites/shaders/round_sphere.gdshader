@@ -10,7 +10,7 @@ void vertex() {
 void fragment() {
 	COLOR = vec4(0.0, 0.0, 0.0, 0.0);
 	if ((UV.x -0.5)*(UV.x -0.5) + (UV.y -0.5)*(UV.y -0.5) < 0.25){
-		COLOR = ((texture(TEXTURE, fract(UV * 32.0))) + (texture(TEXTURE, UV)) + (texture(TEXTURE, fract((UV  * 4.0) + (texelSize) * 3.0))) - 1.3) * 2.0;
+		COLOR = ((texture(TEXTURE, fract(UV * 16.0))) + (texture(TEXTURE, UV)) + (texture(TEXTURE, fract((UV  * 4.0) + (texelSize) * 3.0))) - 1.3) * 2.0;
 		//COLOR = (texture(TEXTURE, fract(UV * 1.0)) * 1.0);
 
 		if (texture(TEXTURE, fract(UV + (0.0016666666666666666 * TIME))).b > 0.8){
