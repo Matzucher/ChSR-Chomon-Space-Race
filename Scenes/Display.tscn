@@ -1,15 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://s7ujus3dj30p"]
+[gd_scene load_steps=11 format=3 uid="uid://s7ujus3dj30p"]
 
 [ext_resource type="Script" uid="uid://2d1ol47w37ax" path="res://Workshop/WorkshopLayer.cs" id="1_dt7qm"]
 [ext_resource type="PackedScene" uid="uid://o2g263jcv3pw" path="res://UserInterfaces/RocketControll/RocketControll.tscn" id="1_wj2rf"]
-[ext_resource type="PackedScene" uid="uid://xqsboqvaa5fu" path="res://UserInterfaces/Debug/DebugView.tscn" id="2_dsbhr"]
+[ext_resource type="Shader" uid="uid://dn8il7mxaspl2" path="res://sprites/Shaders/MaterialShaders/BacgroundParalaxStars.tres" id="1_wvyg2"]
+[ext_resource type="PackedScene" uid="uid://cuwy2ohhf2n2g" path="res://UserInterfaces/Debug/DebugView.tscn" id="2_dsbhr"]
 [ext_resource type="PackedScene" uid="uid://dt36jcc20k55v" path="res://Scenes/World.tscn" id="3_dt7qm"]
-[ext_resource type="PackedScene" uid="uid://b7jlwa1fkadis" path="res://Workshop/Workshop.tscn" id="4_dsbhr"]
+[ext_resource type="PackedScene" uid="uid://do4hm3p51oj22" path="res://Workshop/Workshop.tscn" id="4_dsbhr"]
 
 [sub_resource type="Environment" id="Environment_dt7qm"]
 background_mode = 3
-tonemap_mode = 3
-glow_enabled = true
 glow_levels/1 = 1.0
 glow_levels/2 = 1.0
 glow_levels/4 = 1.0
@@ -25,6 +24,10 @@ dof_blur_far_distance = 9.05
 dof_blur_near_distance = 1.0
 
 [sub_resource type="Compositor" id="Compositor_lcvy2"]
+compositor_effects = Array[CompositorEffect]([null])
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lcvy2"]
+shader = ExtResource("1_wvyg2")
 
 [node name="Node2D" type="Node2D"]
 metadata/_edit_vertical_guides_ = [-944.0]
@@ -34,36 +37,46 @@ environment = SubResource("Environment_dt7qm")
 camera_attributes = SubResource("CameraAttributesPractical_wvyg2")
 compositor = SubResource("Compositor_lcvy2")
 
-[node name="WorkshopLayer" type="CanvasLayer" parent="."]
+[node name="ParalaxStarsBacgroundLayer" type="CanvasLayer" parent="."]
 layer = 0
+
+[node name="StarsParalaxShader" type="ColorRect" parent="ParalaxStarsBacgroundLayer"]
+material = SubResource("ShaderMaterial_lcvy2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="WorkshopLayer" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("1_dt7qm")
 
 [node name="Viewports" type="SubViewportContainer" parent="WorkshopLayer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -256.0
-offset_right = 256.0
-offset_bottom = 256.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+stretch = true
 metadata/_edit_use_anchors_ = true
 
 [node name="WorkshopViewport" type="SubViewport" parent="WorkshopLayer/Viewports"]
 disable_3d = true
+handle_input_locally = false
 use_debanding = true
 use_hdr_2d = true
 anisotropic_filtering_level = 0
+canvas_item_default_texture_filter = 0
+audio_listener_enable_2d = true
 physics_object_picking = true
 positional_shadow_atlas_quad_0 = 1
 positional_shadow_atlas_quad_1 = 1
 positional_shadow_atlas_quad_2 = 2
 positional_shadow_atlas_quad_3 = 3
-size = Vector2i(912, 512)
-render_target_update_mode = 4
+size = Vector2i(854, 480)
+render_target_update_mode = 0
 
 [node name="Workshop" parent="WorkshopLayer/Viewports/WorkshopViewport" instance=ExtResource("4_dsbhr")]
 position = Vector2(-98, 16)
@@ -91,17 +104,20 @@ metadata/_edit_use_anchors_ = true
 
 [node name="WorldViewport" type="SubViewport" parent="WorldLayer/Viewports"]
 disable_3d = true
+transparent_bg = true
+handle_input_locally = false
 use_debanding = true
 use_hdr_2d = true
 anisotropic_filtering_level = 0
+canvas_item_default_texture_filter = 0
+audio_listener_enable_2d = true
 sdf_oversize = 2
 sdf_scale = 0
-positional_shadow_atlas_quad_0 = 1
-positional_shadow_atlas_quad_1 = 1
+positional_shadow_atlas_size = 4096
 positional_shadow_atlas_quad_2 = 2
 positional_shadow_atlas_quad_3 = 3
 size = Vector2i(1140, 640)
 render_target_update_mode = 4
 
 [node name="World" parent="WorldLayer/Viewports/WorldViewport" instance=ExtResource("3_dt7qm")]
-position = Vector2(113, 88)
+position = Vector2(109, 88)

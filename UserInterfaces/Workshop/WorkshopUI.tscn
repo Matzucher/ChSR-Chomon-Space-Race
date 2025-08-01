@@ -21,8 +21,9 @@ grow_vertical = 2
 layer = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_top = 7.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 47.0
 
 [node name="FuelTank" type="Area2D" parent="CanvasLayer/VBoxContainer"]
 position = Vector2(24, 27)
@@ -36,6 +37,7 @@ shape = SubResource("RectangleShape2D_7wlx6")
 position = Vector2(7.105427357601002e-15, -3.552713678800501e-15)
 scale = Vector2(2.1333333333333333, 2.1333333333333333)
 texture = ExtResource("2_vfbdl")
+region_rect = Rect2(0, 0, 127.71593204923505, 128)
 
 [node name="Cockpit" type="Area2D" parent="CanvasLayer/VBoxContainer"]
 position = Vector2(24, 102)

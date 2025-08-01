@@ -3,15 +3,15 @@ using System;
 
 public partial class WorkshopLayer : CanvasLayer
 {
-	public override void _Process(double delta)
-	{
-		if (Globals.Instance.currentViewport == Globals.Viewport.Workshop)
-		{
-			Layer = 1;
-		}
-		else
-		{
-			Layer = 0;
-		}
-	}
+    public override void _Process(double delta)
+    {
+        if (Globals.Instance.currentViewport == Globals.Viewport.Workshop)
+        {
+            Visible = true;
+        }
+        else
+        {
+            Visible = false;
+        }
+    }
 }

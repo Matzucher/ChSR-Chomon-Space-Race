@@ -1,47 +1,30 @@
-[gd_scene load_steps=12 format=3 uid="uid://dt36jcc20k55v"]
+[gd_scene load_steps=9 format=3 uid="uid://dt36jcc20k55v"]
 
 [ext_resource type="Script" uid="uid://djk6kvdplebbo" path="res://testObjects/RocketObject.cs" id="1_gjpho"]
-[ext_resource type="Shader" uid="uid://b63e1trtscuke" path="res://sprites/shaders/BacgroundParalaxStars.tres" id="2_45d1s"]
 [ext_resource type="Texture2D" uid="uid://cplq713fdxfc3" path="res://sprites/rocket_test.png" id="2_p70al"]
-[ext_resource type="Script" uid="uid://cq231a55n0f30" path="res://WorldCamera2d.cs" id="4_p70al"]
+[ext_resource type="Script" uid="uid://cq231a55n0f30" path="res://WorldCamera2d.cs" id="3_gjpho"]
 [ext_resource type="PackedScene" uid="uid://brvocr6jh2b63" path="res://testObjects/SpaceObjectTest.tscn" id="5_y7y61"]
-
-[sub_resource type="Environment" id="Environment_p70al"]
-background_mode = 3
-tonemap_mode = 3
-glow_enabled = true
-glow_levels/1 = 1.0
-glow_levels/2 = 1.0
-glow_levels/4 = 1.0
-glow_levels/6 = 1.0
-glow_normalized = true
-glow_strength = 1.13
-glow_bloom = 0.2
-glow_blend_mode = 1
-glow_hdr_threshold = 1.24
-glow_hdr_luminance_cap = 64.0
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_45d1s"]
-auto_exposure_enabled = true
-dof_blur_far_distance = 9.05
-dof_blur_near_distance = 1.0
-
-[sub_resource type="Compositor" id="Compositor_y7y61"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7yo87"]
 friction = 0.2
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q2d71"]
-shader = ExtResource("2_45d1s")
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gjpho"]
+polygon = PackedVector2Array(-8, 7, 11, 7, 17, -11, 18, -29, 15, -46, 9, -58, 3, -65, -4, -57, -10, -46, -14, -29, -13, -10)
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_uo7di"]
+[sub_resource type="Gradient" id="Gradient_gjpho"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.9910714)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_p70al"]
+gradient = SubResource("Gradient_gjpho")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8931623931623932, 0.12393162393162394)
 
 [node name="World" type="Node2D"]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_p70al")
-camera_attributes = SubResource("CameraAttributesPractical_45d1s")
-compositor = SubResource("Compositor_y7y61")
 
 [node name="RocketObject" type="RigidBody2D" parent="."]
 position = Vector2(458, 255)
@@ -50,32 +33,39 @@ physics_material_override = SubResource("PhysicsMaterial_7yo87")
 can_sleep = false
 script = ExtResource("1_gjpho")
 
-[node name="BacgroundParalaxLayer" type="Sprite2D" parent="RocketObject"]
-visible = false
-z_index = -1
-material = SubResource("ShaderMaterial_q2d71")
-position = Vector2(-4.999999999999993, 8)
-scale = Vector2(1131.7949999999985, 709.0000000000001)
-texture = SubResource("CanvasTexture_uo7di")
-
 [node name="Sprite2D" type="Sprite2D" parent="RocketObject"]
+z_index = 1
 rotation = -0.7853981633974483
 scale = Vector2(0.0988441340819732, 0.096609758955363)
 texture = ExtResource("2_p70al")
 
-[node name="WorldCamera2D" type="Camera2D" parent="RocketObject"]
+[node name="Camera2D" type="Camera2D" parent="RocketObject"]
+zoom = Vector2(2, 2)
 limit_enabled = false
 limit_smoothed = true
-script = ExtResource("4_p70al")
+script = ExtResource("3_gjpho")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RocketObject"]
 position = Vector2(1, 0)
 polygon = PackedVector2Array(-10, 9, 9, 9, 20, 22, 22, -3, 16, -11, 15, -43, 1, -66, -14, -43, -16, -11, -23, -3, -22, 22)
 
-[node name="Polygon2D" type="Polygon2D" parent="RocketObject"]
-position = Vector2(0, 20)
-color = Color(18.892157, 10.792825, 3.6794968, 1)
-polygon = PackedVector2Array(0, 17, 2, 10, 2, 0, 3, 3, 5, 11, 6, 0, 6, -11, -5, -11, -5, -3, -4, 10, -3, 9, -2, 3, 0, 12)
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RocketObject"]
+position = Vector2(-1, 1)
+occluder = SubResource("OccluderPolygon2D_gjpho")
+
+[node name="PointLight2D2" type="PointLight2D" parent="RocketObject"]
+position = Vector2(0, 33)
+color = Color(0.9647059, 0.6313726, 0, 1)
+energy = 3.0700000000000003
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_p70al")
+
+[node name="PointLight2D" type="PointLight2D" parent="RocketObject"]
+position = Vector2(0, 24)
+color = Color(0.9635195, 0.6322405, 0, 1)
+energy = 1.26
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_p70al")
 
 [node name="space_object_test" parent="." instance=ExtResource("5_y7y61")]
 position = Vector2(13488, -10033)

@@ -8,9 +8,13 @@ void vertex() {
 }
 
 void fragment() {
+	//vec2 PixelatedUV = UV - (0.5 * floor(UV/0.5));
+	vec2 PixelatedUV = floor(UV * 64.0) / 64.0;
+	
 	COLOR = vec4(0.0, 0.0, 0.0, 0.0);
+	
 	if ((UV.x -0.5)*(UV.x -0.5) + (UV.y -0.5)*(UV.y -0.5) < 0.25){
-		COLOR = ((texture(TEXTURE, fract(UV * 32.0))) + (texture(TEXTURE, UV)) + (texture(TEXTURE, fract((UV  * 4.0) + (texelSize) * 3.0))) - 1.3) * 2.0;
+		COLOR = ((texture(TEXTURE, fract(UV * 16.0))) + (texture(TEXTURE, UV)) + (texture(TEXTURE, fract((UV  * 4.0) + (texelSize) * 3.0))) - 1.3) * 2.0;
 		//COLOR = (texture(TEXTURE, fract(UV * 1.0)) * 1.0);
 
 		if (texture(TEXTURE, fract(UV + (0.0016666666666666666 * TIME))).b > 0.8){
@@ -28,6 +32,8 @@ void fragment() {
 		COLOR.a = 1.0;
 		//COLOR = (texture(TEXTURE, fract(UV + (0.0016666666666666666 * TIME)))) + (texture(TEXTURE, fract(UV * 32.0 + (texelSize * 2.0))) - 0.5);
 		//vec2 textureStep = textureSize(TEXTURE, 0).x;
+		COLOR.r = PixelatedUV.x;
+		COLOR.g = PixelatedUV.y;
 	}
 }
 
