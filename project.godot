@@ -33,6 +33,7 @@ window/size/sharp_corners=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 window/vsync/vsync_mode=2
+window/sdf/scale=0
 
 [dotnet]
 
@@ -144,4 +145,4 @@ anti_aliasing/quality/msaa_2d=2
 textures/decals/filter=0
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 2d/snap/snap_2d_transforms_to_pixel=true
-2d/snap/snap_2d_vertices_to_pixel=true
+2d/sdf/oversize=2

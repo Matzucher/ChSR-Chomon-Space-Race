@@ -10,7 +10,7 @@ void vertex() {
 void fragment() {
 	//vec2 PixelatedUV = UV - (0.5 * floor(UV/0.5));
 	vec2 PixelatedUV = floor(UV * 64.0) / 64.0;
-	
+	PixelatedUV = PixelatedUV - (0.2 * floor(UV/0.2));
 	COLOR = vec4(0.0, 0.0, 0.0, 0.0);
 	
 	if ((UV.x -0.5)*(UV.x -0.5) + (UV.y -0.5)*(UV.y -0.5) < 0.25){

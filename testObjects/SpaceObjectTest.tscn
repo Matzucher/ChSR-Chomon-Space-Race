@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://brvocr6jh2b63"]
 
-[ext_resource type="Shader" uid="uid://42o6smcjq4dt" path="res://sprites/Shaders/MaterialShaders/round_sphere.gdshader" id="1_hrj6j"]
+[ext_resource type="Shader" uid="uid://captyec1fi6g2" path="res://sprites/Shaders/round_sphere.gdshader" id="1_hrj6j"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ti1bm"]
 rough = true
