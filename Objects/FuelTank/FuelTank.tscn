@@ -16,7 +16,7 @@ texture = ExtResource("1_bcjdx")
 script = ExtResource("2_3wesl")
 
 [node name="WorkshopMovementComponent" type="Area2D" parent="." groups=["WorkshopMovementComponents"]]
-scale = Vector2(1.8799999999999963, 1.8800000000000001)
+scale = Vector2(1.8799999999999963, 1.88)
 script = ExtResource("2_c7uy1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorkshopMovementComponent"]

@@ -1,9 +1,5 @@
-[gd_scene load_steps=12 format=3 uid="uid://dt36jcc20k55v"]
+[gd_scene load_steps=5 format=3 uid="uid://dt36jcc20k55v"]
 
-[ext_resource type="Script" uid="uid://djk6kvdplebbo" path="res://testObjects/RocketObject.cs" id="1_gjpho"]
-[ext_resource type="Shader" uid="uid://b63e1trtscuke" path="res://sprites/shaders/BacgroundParalaxStars.tres" id="2_45d1s"]
-[ext_resource type="Texture2D" uid="uid://cplq713fdxfc3" path="res://sprites/rocket_test.png" id="2_p70al"]
-[ext_resource type="Script" uid="uid://cq231a55n0f30" path="res://WorldCamera2d.cs" id="4_p70al"]
 [ext_resource type="PackedScene" uid="uid://brvocr6jh2b63" path="res://testObjects/SpaceObjectTest.tscn" id="5_y7y61"]
 
 [sub_resource type="Environment" id="Environment_p70al"]
@@ -28,54 +24,12 @@ dof_blur_near_distance = 1.0
 
 [sub_resource type="Compositor" id="Compositor_y7y61"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7yo87"]
-friction = 0.2
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q2d71"]
-shader = ExtResource("2_45d1s")
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_uo7di"]
-
 [node name="World" type="Node2D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_p70al")
 camera_attributes = SubResource("CameraAttributesPractical_45d1s")
 compositor = SubResource("Compositor_y7y61")
-
-[node name="RocketObject" type="RigidBody2D" parent="."]
-position = Vector2(458, 255)
-mass = 10.0
-physics_material_override = SubResource("PhysicsMaterial_7yo87")
-can_sleep = false
-script = ExtResource("1_gjpho")
-
-[node name="BacgroundParalaxLayer" type="Sprite2D" parent="RocketObject"]
-visible = false
-z_index = -1
-material = SubResource("ShaderMaterial_q2d71")
-position = Vector2(-4.999999999999993, 8)
-scale = Vector2(1131.7949999999985, 709.0000000000001)
-texture = SubResource("CanvasTexture_uo7di")
-
-[node name="Sprite2D" type="Sprite2D" parent="RocketObject"]
-rotation = -0.7853981633974483
-scale = Vector2(0.0988441340819732, 0.096609758955363)
-texture = ExtResource("2_p70al")
-
-[node name="WorldCamera2D" type="Camera2D" parent="RocketObject"]
-limit_enabled = false
-limit_smoothed = true
-script = ExtResource("4_p70al")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RocketObject"]
-position = Vector2(1, 0)
-polygon = PackedVector2Array(-10, 9, 9, 9, 20, 22, 22, -3, 16, -11, 15, -43, 1, -66, -14, -43, -16, -11, -23, -3, -22, 22)
-
-[node name="Polygon2D" type="Polygon2D" parent="RocketObject"]
-position = Vector2(0, 20)
-color = Color(18.892157, 10.792825, 3.6794968, 1)
-polygon = PackedVector2Array(0, 17, 2, 10, 2, 0, 3, 3, 5, 11, 6, 0, 6, -11, -5, -11, -5, -3, -4, 10, -3, 9, -2, 3, 0, 12)
 
 [node name="space_object_test" parent="." instance=ExtResource("5_y7y61")]
 position = Vector2(13488, -10033)
@@ -100,3 +54,7 @@ position = Vector2(52924, -3688)
 
 [node name="space_object_test8" parent="." instance=ExtResource("5_y7y61")]
 position = Vector2(9208, -45392)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-542, 257)
+offset = Vector2(1000, 0)

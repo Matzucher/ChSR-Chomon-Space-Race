@@ -27,5 +27,6 @@ public partial class WorkshopManager : Node
 		workshopObject.Name = string.Format(objectName, nextObjectIndexNumber);
 		GD.Print("Utworzono obiekt	", workshopObject.GetName());
 		carriedObjectsCount = 1;
+		
 	}
 }

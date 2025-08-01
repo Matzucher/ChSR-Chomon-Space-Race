@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 /// <summary>
 /// Zmienne Globalne, I funkcje Globalne
@@ -50,6 +51,8 @@ public partial class Globals : Node
 
     public string worldScenePath { get; set;}
 
+    public List<string> controlableRocketComponents { get; set; }
+
     public enum Viewport
     {
         World,
@@ -58,10 +61,14 @@ public partial class Globals : Node
 
     public Viewport currentViewport = Viewport.World;
 
+    public ulong[] playerControlledBody = new ulong[4];
+
+        
     public override void _Ready()
     {
         playerShipNewAcceleration = 0.0;
         Instance = this;
         worldScenePath = "/root/Node2D/WorldLayer/Viewports/WorldViewport/World";
+        controlableRocketComponents = ["Cockpit"];
     }
 }
