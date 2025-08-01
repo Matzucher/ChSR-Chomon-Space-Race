@@ -27,10 +27,11 @@ gdscript/warnings/exclude_addons=false
 
 [display]
 
-window/size/viewport_width=912
-window/size/viewport_height=512
+window/size/viewport_width=854
+window/size/viewport_height=480
+window/size/sharp_corners=true
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/aspect="keep_height"
 window/vsync/vsync_mode=2
 
 [dotnet]
