@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://tyj03syljs00"]
+[gd_scene load_steps=7 format=3 uid="uid://tyj03syljs00"]
 
 [ext_resource type="Texture2D" uid="uid://brcbx2ipa1n3" path="res://sprites/fueltank.png" id="2_vfbdl"]
 [ext_resource type="Script" uid="uid://6svigieot2v3" path="res://UserInterfaces/Workshop/SpawnObject.cs" id="2_xwbh3"]
+[ext_resource type="Texture2D" uid="uid://4r8ck6ds1nef" path="res://sprites/Cockpit.png" id="3_matto"]
 [ext_resource type="Texture2D" uid="uid://7q3vje5l6h7" path="res://sprites/Connector.png" id="3_xwbh3"]
 [ext_resource type="Script" uid="uid://nub8ktqu0u1o" path="res://UserInterfaces/Workshop/AssembleRocket.cs" id="4_au2g6"]
 
@@ -33,8 +34,23 @@ script = ExtResource("2_xwbh3")
 shape = SubResource("RectangleShape2D_7wlx6")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/VBoxContainer/FuelTank"]
+position = Vector2(7.105427357601002e-15, -3.552713678800501e-15)
+scale = Vector2(2.1333333333333333, 2.1333333333333333)
 texture = ExtResource("2_vfbdl")
 region_rect = Rect2(0, 0, 127.71593204923505, 128)
+
+[node name="Cockpit" type="Area2D" parent="CanvasLayer/VBoxContainer"]
+position = Vector2(24, 102)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("2_xwbh3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/VBoxContainer/Cockpit"]
+shape = SubResource("RectangleShape2D_7wlx6")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/VBoxContainer/Cockpit"]
+position = Vector2(-1.7763568394002505e-15, -2.220446049250313e-15)
+scale = Vector2(2.1333333333333337, 2.1333333333333333)
+texture = ExtResource("3_matto")
 
 [node name="Connector" type="Area2D" parent="CanvasLayer/VBoxContainer"]
 position = Vector2(24, 65)
@@ -45,7 +61,8 @@ script = ExtResource("2_xwbh3")
 shape = SubResource("RectangleShape2D_7wlx6")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/VBoxContainer/Connector"]
-scale = Vector2(2, 2)
+position = Vector2(-1.9999999999999971, -1.2434497875801753e-14)
+scale = Vector2(3.4, 3.200000000000001)
 texture = ExtResource("3_xwbh3")
 
 [node name="AssembleRocketButton" type="Button" parent="CanvasLayer"]

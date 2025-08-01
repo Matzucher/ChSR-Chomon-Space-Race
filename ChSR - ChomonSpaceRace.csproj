@@ -8,4 +8,8 @@
     <Compile Remove="Workshop\Objects\**" />
     <EmbeddedResource Remove="Workshop\Objects\**" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Objects\Cockpit\" />
+    <Folder Include="Objects\FuelTank\" />
+  </ItemGroup>
 </Project>

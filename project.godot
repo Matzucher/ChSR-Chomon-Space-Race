@@ -13,7 +13,7 @@ config_version=5
 config/name="ChSR - ChomonSpaceRace"
 run/main_scene="uid://cy7lgdurjxhav"
 config/features=PackedStringArray("4.5", "C#", "Double Precision", "Forward Plus")
-boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/bg_color=Color(0, 0, 0, 0.43529412)
 config/icon="res://sprites/icon.svg"
 
 [autoload]

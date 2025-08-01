@@ -12,7 +12,7 @@ public partial class Workshop : Node2D
 	/// Dodaje obiekt do sceny 
 	/// </summary>
 	/// <param name="workshopObject">obiekt wybrany przez użytkownika</param>
-	public void PlaceObject(StaticBody2D workshopObject)
+	public void PlaceObject(CollisionPolygon2D workshopObject)
 	{
 		AddChild(workshopObject);
 	}

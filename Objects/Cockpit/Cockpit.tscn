@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://00p8nnpyl0qk"]
+
+[ext_resource type="Texture2D" uid="uid://4r8ck6ds1nef" path="res://sprites/Cockpit.png" id="1_o4bou"]
+[ext_resource type="Script" uid="uid://duh2prd4m1c87" path="res://WorldScripts/ConnectionComponent.cs" id="2_vm62i"]
+[ext_resource type="Script" uid="uid://cmipv7ljyuyjb" path="res://Workshop/WorkshopMovementComponent.cs" id="3_b155p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ke2u"]
+size = Vector2(37.49999999986358, 20.053475935805864)
+
+[node name="Cockpit" type="CollisionPolygon2D"]
+polygon = PackedVector2Array(0, -28, 28, 28, -28, 28)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.552713678800501e-15, 8.881784197001252e-16)
+texture = ExtResource("1_o4bou")
+
+[node name="ConnectionComponent" type="Node" parent="."]
+script = ExtResource("2_vm62i")
+
+[node name="WorkshopMovementComponent" type="Area2D" parent="." groups=["WorkshopMovementComponents"]]
+scale = Vector2(1, 1.8699999999953434)
+script = ExtResource("3_b155p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorkshopMovementComponent"]
+scale = Vector2(1.6000000000058208, 1.6000000000058208)
+shape = SubResource("RectangleShape2D_7ke2u")
+
+[node name="Marker2D7" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(20, 16.04278074870305)
+
+[node name="Marker2D8" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(-20, 16.042780748703052)
+
+[node name="Marker2D9" type="Marker2D" parent="WorkshopMovementComponent"]
+position = Vector2(0, 16.042780748703052)

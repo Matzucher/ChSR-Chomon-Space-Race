@@ -4,7 +4,7 @@ using System.Threading;
 
 public partial class SpawnObject : Area2D
 {
-	StaticBody2D workshopObject;
+	CollisionPolygon2D workshopObject;
 	WorkshopManager workshopManager;
 
 	int nextObjecIndexNumber = 1;

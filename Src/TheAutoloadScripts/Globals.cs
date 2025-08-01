@@ -48,25 +48,20 @@ public partial class Globals : Node
     public double playerShipMaxAcceleration { get; set; }
     public double playerShipNewAcceleration { get; set; }
 
-
+    public string worldScenePath { get; set;}
 
     public enum Viewport
     {
         World,
         Workshop
     }
-    public enum Camera2d
-    {
-        WorldCamera2d,
-        WorkshopCamera2d
-    }
 
     public Viewport currentViewport = Viewport.World;
-    public Camera2d currentCamera2d = Camera2d.WorldCamera2d;
 
     public override void _Ready()
     {
         playerShipNewAcceleration = 0.0;
         Instance = this;
+        worldScenePath = "/root/Node2D/WorldLayer/Viewports/WorldViewport/World";
     }
 }
