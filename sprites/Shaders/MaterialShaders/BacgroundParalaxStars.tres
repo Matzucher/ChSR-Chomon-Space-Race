@@ -1,6 +1,7 @@
 [gd_resource type="VisualShader" load_steps=2 format=3 uid="uid://dn8il7mxaspl2"]
 
 [sub_resource type="VisualShaderNodeColorFunc" id="VisualShaderNodeColorFunc_uljjj"]
+output_port_for_preview = 0
 default_input_values = [0, Vector3(0.5, 0, 0)]
 
 [resource]

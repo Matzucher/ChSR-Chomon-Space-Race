@@ -43,6 +43,20 @@ project/assembly_name="ChSR - ChomonSpaceRace"
 naming/scene_name_casing=1
 naming/script_name_casing=1
 
+[file_customization]
+
+folder_colors={
+"res://Objects/": "red",
+"res://Properties/": "teal",
+"res://Scenes/": "blue",
+"res://Src/": "pink",
+"res://UserInterfaces/": "green",
+"res://Workshop/": "yellow",
+"res://WorldScripts/": "orange",
+"res://sprites/": "purple",
+"res://testObjects/": "gray"
+}
+
 [global_group]
 
 WorkshopMovementComponents="Markers in Workshop"
