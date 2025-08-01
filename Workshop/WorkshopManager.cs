@@ -22,7 +22,7 @@ public partial class WorkshopManager : Node
 	public void ItemSelect(string objectName, int nextObjectIndexNumber)
 	{
 		string path = string.Format("res://Objects/{0}/{0}.tscn", objectName);
-		StaticBody2D workshopObject = GD.Load<PackedScene>(path).Instantiate<StaticBody2D>();
+        CollisionPolygon2D workshopObject = GD.Load<PackedScene>(path).Instantiate<CollisionPolygon2D>();
 		GetTree().CallGroup("OfficeGroup", "PlaceObject", workshopObject);
 		workshopObject.Name = string.Format(objectName, nextObjectIndexNumber);
 		GD.Print("Utworzono obiekt	", workshopObject.GetName());

@@ -7,7 +7,7 @@ using static Godot.HttpRequest;
 public partial class WorkshopMovementComponent : Area2D
 {
 	WorkshopManager workshopManager;
-	StaticBody2D workshopObject;
+	CollisionPolygon2D workshopObject;
 	Node2D workshopScene;
 	bool dragging = false;
 	List<Marker2D> markers = new List<Marker2D>();
@@ -27,7 +27,7 @@ public partial class WorkshopMovementComponent : Area2D
 
 		workshopScene = GetNode<Node2D>("../../");
 		workshopManager = GetNode<WorkshopManager>("../../WorkshopManager");
-		workshopObject = GetParent<StaticBody2D>();
+		workshopObject = GetParent<CollisionPolygon2D>();
 		connectionComponent = GetParent().GetNode<ConnectionComponent>("ConnectionComponent");
 		GD.Print("MovementComponent ", GetParent().GetName(), " My Parent is ", GetParent().GetParent().GetName());
 		dragging = true;
@@ -64,34 +64,34 @@ public partial class WorkshopMovementComponent : Area2D
 			{
 				dragging = false;
 				workshopManager.carriedObjectsCount = 0;
-				workshopObject.ZIndex = 2;
-				
+				workshopObject.GetNode<Sprite2D>("Sprite2D").ZIndex = 2;
+
 				//po upuszczeniu obiektu zapisz wszystkie stykające obiekty
 				connectionComponent.oldConnectedObjects = connectionComponent.connectedObjects;
-				connectionComponent.connectedObjects = new List<StaticBody2D>();
+				connectionComponent.connectedObjects = new List<CollisionPolygon2D>();
 				///uzupełnianie własnej listy połączonych obiektów
 				foreach (Marker2D marker in markers)
 				{
 					Marker2D? foundMarker = FindMarkerAtPosition(marker.GlobalPosition);
 					if(foundMarker != null)
 					{
-						connectionComponent.connectedObjects.Add(foundMarker.GetParent().GetParent<StaticBody2D>());
+						connectionComponent.connectedObjects.Add(foundMarker.GetParent().GetParent<CollisionPolygon2D>());
 					}
 				}
 				connectionComponent.connectedObjects = connectionComponent.connectedObjects.Distinct().ToList();
 				///usuwanie się z list innych obiektów w przypadku odłączenia się od nich
-				List<StaticBody2D> disconectedObjects = connectionComponent.oldConnectedObjects.Except(connectionComponent.connectedObjects).ToList();
-				foreach(StaticBody2D disconnectedObject in disconectedObjects)
+				List<CollisionPolygon2D> disconectedObjects = connectionComponent.oldConnectedObjects.Except(connectionComponent.connectedObjects).ToList();
+				foreach(CollisionPolygon2D disconnectedObject in disconectedObjects)
 				{
 					ConnectionComponent disconnectedObjectsConnectionComponent = disconnectedObject.GetNode<ConnectionComponent>("ConnectionComponent");
-					disconnectedObjectsConnectionComponent.connectedObjects.Remove(GetParent<StaticBody2D>());
+					disconnectedObjectsConnectionComponent.connectedObjects.Remove(GetParent<CollisionPolygon2D>());
 				}
 
 				///aktualizowanie list połączonych z tym obiektem
 				foreach(Node connectedObject in connectionComponent.connectedObjects)
 				{
 					ConnectionComponent objectsConnectionComponent = connectedObject.GetNode<ConnectionComponent>("ConnectionComponent");
-					objectsConnectionComponent.connectedObjects.Add(GetParent<StaticBody2D>());
+					objectsConnectionComponent.connectedObjects.Add(GetParent<CollisionPolygon2D>());
 					objectsConnectionComponent.connectedObjects = objectsConnectionComponent.connectedObjects.Distinct().ToList();
 				}
 
