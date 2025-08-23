@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://v7bm4mkvucbi"]
+
+[ext_resource type="PackedScene" uid="uid://y5rox0uup4np" path="res://Client/Scenes/World.tscn" id="1_ksihf"]
+
+[node name="MainDisplay" type="Node2D"]
+
+[node name="WorkshopSubViewportContainer2" type="SubViewportContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="NOTE-THIS_IS_TO_BE_IMPLEMENTED" type="Node" parent="WorkshopSubViewportContainer2"]
+
+[node name="WorkshopSubViewport" type="SubViewport" parent="WorkshopSubViewportContainer2"]
+handle_input_locally = false
+size = Vector2i(2, 2)
+render_target_update_mode = 0
+
+[node name="WorldSubViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="WorldSubViewport" type="SubViewport" parent="WorldSubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(2, 2)
+render_target_update_mode = 4
+
+[node name="World" parent="WorldSubViewportContainer/WorldSubViewport" instance=ExtResource("1_ksihf")]

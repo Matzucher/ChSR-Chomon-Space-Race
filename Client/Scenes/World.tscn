@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://y5rox0uup4np"]
+
+[ext_resource type="Script" uid="uid://brp5gskx8o7t4" path="res://Client/Scenes/NetworkingMenager.cs" id="1_adof4"]
+
+[sub_resource type="Environment" id="Environment_dwlvm"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_adof4"]
+
+[sub_resource type="Compositor" id="Compositor_8cr6g"]
+
+[node name="World" type="Node2D"]
+
+[node name="NetworkingMenager" type="Node2D" parent="."]
+process_priority = -1000
+process_physics_priority = -1000
+script = ExtResource("1_adof4")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dwlvm")
+camera_attributes = SubResource("CameraAttributesPractical_adof4")
+compositor = SubResource("Compositor_8cr6g")
+
+[node name="PhysicalParticlesMenager" type="MultiMeshInstance2D" parent="."]
+process_priority = -999
+process_physics_priority = -999

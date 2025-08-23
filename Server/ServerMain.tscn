@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://s7ujus3dj30p"]
+
+[ext_resource type="Script" uid="uid://c3xepf4nnwtqt" path="res://Server/ServerNetworkingMenager.cs" id="1_fo0u8"]
+[ext_resource type="PackedScene" uid="uid://dt36jcc20k55v" path="res://Server/Scenes/World.tscn" id="4_ao8ie"]
+
+[node name="Node2D" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-944.0]
+
+[node name="ServerNetworkingMenager" type="Node" parent="."]
+process_priority = 1000
+process_physics_priority = 1000
+script = ExtResource("1_fo0u8")
+
+[node name="World" parent="." instance=ExtResource("4_ao8ie")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.005000000004656613, 0.005000000004656613)

@@ -13,13 +13,12 @@ config_version=5
 config/name="ChSR - ChomonSpaceRace"
 run/main_scene="uid://cy7lgdurjxhav"
 config/features=PackedStringArray("4.5", "C#", "Double Precision", "Forward Plus")
-boot_splash/bg_color=Color(0, 0, 0, 0.43529412)
-config/icon="res://sprites/icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 0.435294)
+config/icon="res://Client/sprites/icon.svg"
 
 [autoload]
 
-WorkshopGlobals="*res://Src/TheAutoloadScripts/WorkshopGlobals.cs"
-Globals="*res://Src/TheAutoloadScripts/Globals.cs"
+Globals="*res://SheredAsets/AutoloadScripts/Globals.cs"
 
 [debug]
 
@@ -46,15 +45,18 @@ naming/script_name_casing=1
 [file_customization]
 
 folder_colors={
-"res://Objects/": "red",
-"res://Properties/": "teal",
-"res://Scenes/": "blue",
-"res://Src/": "pink",
-"res://UserInterfaces/": "green",
-"res://Workshop/": "yellow",
-"res://WorldScripts/": "orange",
-"res://sprites/": "purple",
-"res://testObjects/": "gray"
+"res://Client/": "green",
+"res://Client/UserInterfaces/": "green",
+"res://Client/Workshop/": "yellow",
+"res://Client/Workshop/Objects/": "red",
+"res://Client/sprites/": "purple",
+"res://Networking/": "red",
+"res://Networking/MaterialObject/": "yellow",
+"res://Server/Properties/": "teal",
+"res://Server/Scenes/": "blue",
+"res://Server/Src/": "pink",
+"res://Server/WorldScripts/": "orange",
+"res://Server/testObjects/": "gray"
 }
 
 [global_group]

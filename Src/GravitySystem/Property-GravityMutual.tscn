@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cg7xqh5q1s1rv"]
-
-[ext_resource type="Script" uid="uid://bc8qp5nosj0j4" path="res://Src/GravitySystem/PropertyGravityMutual.cs" id="1_e431j"]
-
-[node name="PropertyGravityMutual" type="Node"]
-script = ExtResource("1_e431j")

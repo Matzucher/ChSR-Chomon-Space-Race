@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://wcshf5n8isqm"]
+
+[ext_resource type="Script" uid="uid://cc3ouniiq1lg6" path="res://Networking/MaterialObject/ClientMaterial.cs" id="1_uskkd"]
+
+[node name="ClientMaterial" type="Node2D"]
+process_priority = 10
+process_physics_priority = 10
+script = ExtResource("1_uskkd")

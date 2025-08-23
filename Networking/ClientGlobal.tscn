@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bkhng7f61a1ni"]
+
+[node name="ClientGlobals" type="Node2D"]

@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3 uid="uid://dt36jcc20k55v"]
+
+[ext_resource type="Script" uid="uid://djk6kvdplebbo" path="res://Server/testObjects/RocketObject.cs" id="1_gjpho"]
+[ext_resource type="Texture2D" uid="uid://cplq713fdxfc3" path="res://Client/sprites/rocket_test.png" id="2_p70al"]
+[ext_resource type="Script" uid="uid://cq231a55n0f30" path="res://Server/WorldCamera2d.cs" id="3_gjpho"]
+[ext_resource type="PackedScene" uid="uid://brvocr6jh2b63" path="res://Server/testObjects/SpaceObjectTest.tscn" id="5_y7y61"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7yo87"]
+friction = 0.2
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gjpho"]
+polygon = PackedVector2Array(-8, 7, 11, 7, 17, -11, 18, -29, 15, -46, 9, -58, 3, -65, -4, -57, -10, -46, -14, -29, -13, -10)
+
+[sub_resource type="Gradient" id="Gradient_gjpho"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.9910714)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_p70al"]
+gradient = SubResource("Gradient_gjpho")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8931623931623932, 0.12393162393162394)
+
+[node name="World" type="Node2D"]
+
+[node name="RocketObject" type="RigidBody2D" parent="."]
+position = Vector2(458, 255)
+mass = 10.0
+physics_material_override = SubResource("PhysicsMaterial_7yo87")
+can_sleep = false
+script = ExtResource("1_gjpho")
+
+[node name="Sprite2D" type="Sprite2D" parent="RocketObject"]
+z_index = 1
+rotation = -0.7853981633974483
+scale = Vector2(0.0988441340819732, 0.096609758955363)
+texture = ExtResource("2_p70al")
+
+[node name="Camera2D" type="Camera2D" parent="RocketObject"]
+zoom = Vector2(2, 2)
+limit_enabled = false
+limit_smoothed = true
+script = ExtResource("3_gjpho")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RocketObject"]
+position = Vector2(1, 0)
+polygon = PackedVector2Array(-10, 9, 9, 9, 20, 22, 22, -3, 16, -11, 15, -43, 1, -66, -14, -43, -16, -11, -23, -3, -22, 22)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RocketObject"]
+position = Vector2(-1, 1)
+occluder = SubResource("OccluderPolygon2D_gjpho")
+
+[node name="PointLight2D2" type="PointLight2D" parent="RocketObject"]
+position = Vector2(0, 33)
+color = Color(0.9647059, 0.6313726, 0, 1)
+energy = 3.0700000000000003
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_p70al")
+
+[node name="PointLight2D" type="PointLight2D" parent="RocketObject"]
+position = Vector2(0, 24)
+color = Color(0.9635195, 0.6322405, 0, 1)
+energy = 1.26
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_p70al")
+
+[node name="space_object_test" parent="." instance=ExtResource("5_y7y61")]
+position = Vector2(13488, -10033)
+
+[node name="space_object_test2" parent="." instance=ExtResource("5_y7y61")]
+position = Vector2(23093, 22623)
+
+[node name="space_object_test3" parent="." instance=ExtResource("5_y7y61")]
+position = Vector2(-25316, -22627)
+
+[node name="space_object_test4" parent="." instance=ExtResource("5_y7y61")]
+position = Vector2(-11460, 11928)
+
+[node name="space_object_test5" parent="." instance=ExtResource("5_y7y61")]
+position = Vector2(-47044, 6296)
+
+[node name="space_object_test6" parent="." instance=ExtResource("5_y7y61")]
+position = Vector2(-20804, 46232)
+
+[node name="space_object_test7" parent="." instance=ExtResource("5_y7y61")]
+position = Vector2(52924, -3688)
+
+[node name="space_object_test8" parent="." instance=ExtResource("5_y7y61")]
+position = Vector2(9208, -45392)
