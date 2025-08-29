@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dt36jcc20k55v"]
+[gd_scene load_steps=10 format=3 uid="uid://dt36jcc20k55v"]
 
 [ext_resource type="Script" uid="uid://djk6kvdplebbo" path="res://Server/testObjects/RocketObject.cs" id="1_gjpho"]
 [ext_resource type="Texture2D" uid="uid://cplq713fdxfc3" path="res://Client/sprites/rocket_test.png" id="2_p70al"]
@@ -7,6 +7,8 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7yo87"]
 friction = 0.2
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cptrm"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gjpho"]
 polygon = PackedVector2Array(-8, 7, 11, 7, 17, -11, 18, -29, 15, -46, 9, -58, 3, -65, -4, -57, -10, -46, -14, -29, -13, -10)
@@ -35,6 +37,7 @@ script = ExtResource("1_gjpho")
 
 [node name="Sprite2D" type="Sprite2D" parent="RocketObject"]
 z_index = 1
+material = SubResource("CanvasItemMaterial_cptrm")
 rotation = -0.7853981633974483
 scale = Vector2(0.0988441340819732, 0.096609758955363)
 texture = ExtResource("2_p70al")

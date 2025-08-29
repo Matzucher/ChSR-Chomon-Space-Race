@@ -6,7 +6,7 @@
 [node name="Node2D" type="Node2D"]
 metadata/_edit_vertical_guides_ = [-944.0]
 
-[node name="ServerNetworkingMenager" type="Node" parent="."]
+[node name="NetworkingMenager" type="Node" parent="."]
 process_priority = 1000
 process_physics_priority = 1000
 script = ExtResource("1_fo0u8")
@@ -14,4 +14,4 @@ script = ExtResource("1_fo0u8")
 [node name="World" parent="." instance=ExtResource("4_ao8ie")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.005000000004656613, 0.005000000004656613)
+zoom = Vector2(0.00500000000465661, 0.00500000000465661)

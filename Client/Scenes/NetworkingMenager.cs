@@ -77,4 +77,15 @@ public partial class NetworkingMenager : Node2D
         Multiplayer.MultiplayerPeer = null;
     }
     #endregion
+
+    #region SERVER SIDE
+    public void _on_client_join()
+    {
+
+    }
+    #endregion
+
+    #region CLIENT SIDE
+
+    #endregion
 }
