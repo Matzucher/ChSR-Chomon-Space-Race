@@ -19,18 +19,7 @@ public partial class ServerNetworkingMenager : Node
         ServerNetworkingMenager.Instance = this;
         Peer = new ENetMultiplayerPeer();
 
-        //error handling for ENet
-        Error ENetConectionError = Peer.CreateServer(Globals.Settings.serverPortUDP, 32);
-        switch (ENetConectionError)
-        {
-            case Error.Ok:
-                break;
-            default:
-                GD.Print("ENetMultiplayerPeer swhile trying to createhost for the server: " + ENetConectionError.ToString());
-                break;
-        }
 
-        Multiplayer.MultiplayerPeer = Peer;
         
     }
 

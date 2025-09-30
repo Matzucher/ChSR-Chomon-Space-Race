@@ -1,5 +1,8 @@
 using Godot;
 using System;
+using System.Collections;
+using System.Threading;
+using static System.Net.Mime.MediaTypeNames;
 
 /// <summary>
 /// Zmienne Globalne, I funkcje Globalne
@@ -7,6 +10,63 @@ using System;
 public partial class Globals : Node
 {
     public static Globals Instance { get; private set; }
+
+    #region Debug and other tooling
+    /// <summary>
+    /// Wraping for GD.PtintRich to get an eassy and standardized way for printing stuff wihout it geting lost forever in the code
+    /// </summary>
+    /// <param name="StringToPrint">the accual thing you want ot print</param>
+    /// <param name="Location">the position at witch this</param>
+    /// <param name="isImportant">it this a critical mesage like an error</param>
+    public static void Print(String StringToPrint,
+        [System.Runtime.CompilerServices.CallerFilePath] string sourceFilePath = "",
+        [System.Runtime.CompilerServices.CallerLineNumber] int sourceLineNumber = 0)
+    {
+        String[] sourceFilePathArray = sourceFilePath.Split('\\');
+
+        String Location = sourceFilePathArray[sourceFilePathArray.Length - 1] + " >" + sourceLineNumber.ToString();
+        String threadName = "";
+        if (Thread.CurrentThread.Name != null)
+        {
+            threadName += Thread.CurrentThread.Name;
+        }
+        else
+        {
+            threadName += "Unknown Thrad";
+        }
+        int threadcolor = Convert.ToInt32(threadName[0]) * Convert.ToInt32(threadName[1]) * Convert.ToInt32(threadName[2]);
+        threadcolor = threadcolor % 8;
+        String threadColorString = "";
+        switch (threadcolor)
+        {
+            case 0:
+                threadColorString += "[color=#df7126]";
+                break;
+            case 1:
+                threadColorString += "[color=#76428a]";
+                break;
+            case 2:
+                threadColorString += "[color=#5fcde4]";
+                break;
+            case 3:
+                threadColorString += "[color=#fbf236]";
+                break;
+            case 4:
+                threadColorString += "[color=#d77bba]";
+                break;
+            case 5:
+                threadColorString += "[color=#8f974a]";
+                break;
+            case 6:
+                threadColorString += "[color=#6abe30]";
+                break;
+            case 7:
+                threadColorString += "[color=#5b6ee1]";
+                break;
+        }
+        GD.PrintRich("[" + threadColorString + threadName + "[/color] " + Location + "] " + StringToPrint);
+    }
+    #endregion
 
     #region constants
 
@@ -96,6 +156,7 @@ public partial class Globals : Node
     #endregion
     public override void _Ready()
     {
+        Thread.CurrentThread.Name = "Main";
         playerShipNewAcceleration = 0.0;
         Instance = this;
     }

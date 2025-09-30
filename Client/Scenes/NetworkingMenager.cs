@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public partial class NetworkingMenager : Node2D
 {
+    [Export]
+    public bool isServer;
     public static NetworkingMenager Instance { get; private set; }
 
     ENetMultiplayerPeer Peer;
@@ -14,6 +16,17 @@ public partial class NetworkingMenager : Node2D
     {
         base._Ready();
         NetworkingMenager.Instance = this;
+
+        if (isServer == true)
+        {
+            //FIX ME: change this if we change how server is started
+            StartServer();
+        }
+        else
+        {
+            //FIX ME: change this when we get a server brawser doen the line
+            ConnectToServer();
+        }
     }
 
     #region Functions responsible for Creating the Server/Connection to the server and terminating it
@@ -62,6 +75,7 @@ public partial class NetworkingMenager : Node2D
         }
 
         Multiplayer.MultiplayerPeer = Peer;
+        Multiplayer.PeerConnected += _on_client_join();
     }
     public void StartServer()
     {
@@ -79,9 +93,12 @@ public partial class NetworkingMenager : Node2D
     #endregion
 
     #region SERVER SIDE
-    public void _on_client_join()
+    private Godot.MultiplayerApi.PeerConnectedEventHandler _on_client_join()
     {
-
+        Globals.Print("deam you matzuher");
+        Godot.MultiplayerApi.PeerConnectedEventHandler peerConnectedEventHandler = null;
+        GD.Print("deam you matzuher but after I summon Godot.MultiplayerApi.PeerConnectedEventHandler peerConnectedEventHandler = null;");
+        return peerConnectedEventHandler;
     }
     #endregion
 
