@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx7yrs7rab8bf"]
+
+[ext_resource type="Script" uid="uid://d10semc5rsymx" path="res://Networking/NetworkingMenagerClient.cs" id="1_5ijyb"]
+
+[node name="NetworkingMenagerClient" type="Node2D"]
+process_priority = -1000
+process_physics_priority = -1000
+script = ExtResource("1_5ijyb")

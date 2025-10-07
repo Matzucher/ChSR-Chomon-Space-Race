@@ -124,6 +124,11 @@ public partial class Globals : Node
     /// </summary>
     /// oh and also this does not include planets as they have their own shaders
 
+    public static AtlasTexture ?TheTextureAtlas;
+    public static string pathToTheTextureAtlas = "res://SheredAsets/Sprites/TextureAtlas_1.png";
+    public static string pathToTheTextureAtlasSprite = "res://Networking/MaterialObject/TextureAtlasSprite.tscn";
+
+
     //W przyszłości można pozmieniać te nazwy, ale na razie zrobiłem tak
     public enum SpriteSet: UInt16
     {
@@ -135,7 +140,7 @@ public partial class Globals : Node
 
     }
 
-    public Rect2 SpriteSetToAtlasRect(SpriteSet Sprite)
+    public static Rect2 SpriteSetToAtlasRect(SpriteSet Sprite)
     {
         switch (Sprite)
         {
@@ -158,6 +163,14 @@ public partial class Globals : Node
     {
         Thread.CurrentThread.Name = "Main";
         playerShipNewAcceleration = 0.0;
+        //TheTextureAtlas.Atlas = GD.Load<Texture2D>(pathToTheTextureAtlas);
+        //if (TheTextureAtlas == null)
+        //{
+        //    Globals.Print("Failed to load AtlasTexture.");
+        //    return;
+        //}
+
+
         Instance = this;
     }
 }
