@@ -10,6 +10,7 @@
     <EmbeddedResource Remove="Workshop\Objects\**" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Client\Scenes\" />
     <Folder Include="Objects\Cockpit\" />
     <Folder Include="Objects\FuelTank\" />
   </ItemGroup>
